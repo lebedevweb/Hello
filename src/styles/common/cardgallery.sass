@@ -1,0 +1,67 @@
+.cardgallery
+  max-width: 700px
+
+  &_link
+    position: relative
+    display: block
+    color: $light
+    text-decoration: none
+    overflow: hidden
+
+    &:hover .cardgallery_picture
+      transform: scale(1.2)
+
+  &_picture
+    display: block
+    width: 100%
+    transition: transform 1s ease-out
+
+  &_image
+    display: inherit
+    width: inherit
+
+  &_category
+    position: absolute
+    top: 15px
+    left: 10px
+    display: flex
+    align-items: center
+    font-family: $font-title
+    font-weight: 400
+
+    &::before
+      content: ''
+      width: 15px
+      height: 15px
+      margin-right: 7px
+
+  &_footer
+    box-sizing: border-box
+    position: absolute
+    bottom: 0
+    left: 0
+    min-width: 50%
+    max-width: 100%
+    background-color: rgba($primary,.7)
+    backdrop-filter: blur(7px)
+    padding: 28px 10px 15px 10px
+
+    @media only screen and (max-width: 1199px)
+      padding: 18px 10px 15px 10px
+
+    @media only screen and (max-width: 767px)
+      padding: 10px
+
+  &_title
+    font-weight: 400
+    margin-bottom: 15px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 10px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 5px
+
+  &_time
+    color: lighten($date,30)
+

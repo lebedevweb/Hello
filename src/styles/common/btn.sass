@@ -1,0 +1,58 @@
+.btn
+  box-sizing: border-box
+  position: relative
+  display: inline-block
+  font-size: 14px
+  font-weight: 500
+  text-align: center
+  text-decoration: none
+  border: none
+  background-color: transparent
+  transition:
+    property: color, background-color, border
+    timing-function: ease-out
+    duration: .4s
+  cursor: pointer
+
+  &_primary
+    color: $light
+    background-color: $primary
+    border: 1px solid $primary
+    padding: 10px 25px
+
+    &:hover
+      background-color: rgba($primary,.8)
+
+    &_outline
+      color: $primary
+      border: 1px solid $primary
+      padding: 10px 20px
+
+      &:hover
+        background-color: rgba($primary,.1)
+
+  &_link
+    color: $primary
+    padding: 10px 20px
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      height: 100%
+      width: 0
+      background-color: rgba($primary,.1)
+      z-index: -1
+      transition: width .3s ease-out
+
+    &::before
+      left: 0
+
+    &::after
+      right: 0
+
+    &:hover::before,
+    &:hover::after
+      width: 50%
+

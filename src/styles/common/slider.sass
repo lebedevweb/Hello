@@ -1,0 +1,200 @@
+.slider
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: end
+
+  &_topnews
+    box-sizing: border-box
+    width: 35%
+    padding-right: 2%
+
+    @media only screen and (max-width: 1680px)
+      width: 40%
+
+    @media only screen and (max-width: 1199px)
+      display: none
+
+    &_title
+      font-family: $font-title2
+      font-size: 24px
+      margin-bottom: 30px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 20px
+        margin-bottom: 20px
+
+    &_list
+      list-style-type: "\2014"
+
+    &_item
+      list-style-position: inside
+
+      &:not(:last-child)
+        margin-bottom: 30px
+
+        @media only screen and (max-width: 1680px)
+          margin-bottom: 10px
+
+      & > a
+        color: inherit
+        font-size: 14px
+        text-decoration-color: transparent
+        transition: text-decoration-color .3s ease-out
+        margin-left: 10px
+
+        &:hover
+          text-decoration-color: $primary
+
+        @media only screen and (max-width: 1680px)
+          font-size: 12px
+
+
+  &_article
+    width: 65%
+
+    @media only screen and (max-width: 1680px)
+      width: 60%
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
+
+    &_header
+      position: relative
+
+    &_picture
+      display: block
+      box-shadow: 20px -20px #d0d9e8
+      width: 100%
+
+      @media only screen and (max-width: 1199px)
+        box-shadow: none
+
+    &_image
+      display: block
+      width: inherit
+      height: auto
+
+    &_badge
+      position: absolute
+      top: 0
+      left: 0
+      width: 35%
+      text-align: center
+
+      @media only screen and (max-width: 1680px)
+        width: 40%
+
+      @media only screen and (max-width: 1199px)
+        position: relative
+        width: 100%
+
+
+    &_body
+      border-left: 2px solid $primary
+      padding: 30px
+      margin-bottom: 20px
+
+      @media only screen and (max-width: 1680px)
+        padding: 10px
+
+      @media only screen and (max-width: 1199px)
+        border-left: none
+
+      @media only screen and (max-width: 767px)
+        padding: 10px 0
+
+    &_category
+      display: block
+      font-family: $font-title
+      font-size: 36px
+      margin-bottom: 24px
+
+      & > a
+        color: inherit
+
+      @media only screen and (max-width: 1680px)
+        font-size: 30px
+        margin-bottom: 14px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 25px
+
+      @media only screen and (max-width: 767px)
+        font-size: 20px
+
+    &_footer
+      text-align: left
+
+      @media only screen and (max-width: 1199px)
+        text-align: center
+
+
+
+    &_title
+      font-family: $font-title
+      font-weight: 700
+      font-size: 34px
+      line-height: 1
+
+      & > a
+        color: inherit
+        text-decoration: none
+
+      @media only screen and (max-width: 1680px)
+        font-size: 30px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 25px
+
+      @media only screen and (max-width: 767px)
+        font-size: 20px
+
+  &_dots
+    position: absolute
+    top: 90%
+    right: 0
+    width: 65%
+    display: flex
+    list-style: none
+    justify-content: center
+    align-items: center
+
+    @media only screen and (max-width: 1680px)
+      width: 60%
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
+      top: 70%
+
+    @media only screen and (max-width: 983px)
+      top: 67%
+
+    @media only screen and (max-width: 787px)
+      top: 60%
+
+    @media only screen and (max-width: 551px)
+      top: 42%
+
+    @media only screen and (max-width: 335px)
+      top: 33%
+
+    &_item
+      display: block
+      width: 10px
+      height: 10px
+      background-color: $light
+      border: 2px solid transparent
+        radius: 50%
+      transition-property: background-color, border
+      transition-duration: .3s
+      transition-timing-function: ease-out
+
+      &:not(:last-child)
+        margin-right: 10px
+
+      &.active
+        background-color: transparent
+        border: 3px solid $light
+
+

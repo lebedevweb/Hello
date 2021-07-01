@@ -1,0 +1,58 @@
+.card
+  max-width: 340px
+
+  &:hover .card_image
+    transform: scale(1.2)
+
+  &_picture
+    display: block
+    width: 100%
+    overflow: hidden
+    margin-bottom: 20px
+
+  &_image
+    display: block
+    width: 100%
+    transition: transform .5s ease-out
+
+  &_category
+    display: flex
+    align-items: center
+    font-family: $font-title
+    font-weight: 400
+    margin-bottom: 15px
+
+    & > a
+      color: inherit
+      text-decoration-color: transparent
+      transition: text-decoration-color .3s ease-out
+
+      &:hover
+        text-decoration-color: $primary
+
+    &::before
+      content: ''
+      width: 15px
+      height: 15px
+      margin-right: 7px
+
+  &_title
+    font-family: $font-body
+    font-weight: 600
+    margin-bottom: 20px
+
+    & > a
+      color: inherit
+      text-decoration-color: transparent
+      transition: text-decoration-color .3s ease-out
+
+      &:hover
+        text-decoration-color: $primary
+
+  &_description
+    margin-bottom: 20px
+
+  &_time
+    color: $date
+    text-transform: uppercase
+

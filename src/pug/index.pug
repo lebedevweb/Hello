@@ -1,0 +1,337 @@
+include components/head.pug
+main(class="container home")
+	section(class="slider")
+		div(class="slider_topnews")
+			h2(class="slider_topnews_title") TOP NEWS
+			ul(class="slider_topnews_list")
+				li(class="slider_topnews_item")
+					a(href="#0") Не без проблем: принц Гарри прилетел в Великобританию на 60-летие со дня рождения принцессы Дианы
+				li(class="slider_topnews_item")
+					a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
+				li(class="slider_topnews_item")
+					a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
+
+		article(class="slider_article active")
+			header(class="slider_article_header")
+				picture(class="slider_article_picture")
+					source(srcset="./images/main/slider1.webp" type="image/webp")
+					img(class="slider_article_image" src="./images/main/slider1.jpg" alt="" width="950" height="auto")
+			div(class="slider_article_badge")
+				div(class="slider_article_body")
+					span(class="slider_article_category")
+						a(href="#0") "НОВОСТИ О ЗВЕЗДАХ"
+					h2(class="slider_article_title")
+						a(href="#0") "Он должен сидеть в тюрьме!": Бритни Спирс рассказала, как на протяжении 13 лет обходился с ней отец
+
+				footer(class="slider_article_footer")
+					a(class="btn btn_primary" href="#0") Читать далее
+
+		ul(class="slider_dots")
+			li(class="slider_dots_item active")
+			li(class="slider_dots_item")
+			li(class="slider_dots_item")
+			li(class="slider_dots_item")
+
+
+	section(class="home_lastnews")
+		picture(class="home_lastnews_picture")
+			source(srcset="./images/main/lastnews.webp" type="image/webp")
+			img(class="home_lastnews_image" src="./images/main/lastnews.jpg" alt="" width="550" height="auto")
+		article(class="home_lastnews_content")
+			h1(class="fs_36") "Меган Маркл написала еще одну книгу"
+			p(class="fs_18") Стало известно, что, будучи в 8 классе, будущая герцогиня Сассекская опубликовала свой первый литературный труд.
+			p(class="fs_18") Меган Маркл, которая недавно стала детским писателем и выпустила книгу "Скамейка", на самом деле с юности мечтала заниматься литературным творчеством. Неожиданно выяснилось, что супруга принца Гарри написала свою первую книгу, когда ей было примерно 14 лет. Об этом стало известно благодаря библиотекарю 14-го созыва Конгресса Карле Хайден, которая опубликовала фото ранее неизвестной книги Меган в своем Twitter...
+			a(class="btn btn_primary") Подробнее...
+
+	section(class="home_shapter")
+		header(class="home_header")
+			h2(class="home_title fs_36 marker_red") Звезды
+			a(class="btn btn_primary_outline" href="#0") Перейти в раздел
+		div(class="home_row")
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news1.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news1.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_red")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news2.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news2.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_red")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+				p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news3.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news3.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_red")
+					a(href="#0") Красная дорожка
+				h3(class="card_title fs_18")
+					a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
+				p(class="card_description") Хроника четвертого дня фестиваля "Жара".
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news4.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news4.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_red")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+	section(class="home_shapter")
+		header(class="home_header")
+			h2(class="home_title fs_36 marker_black") Мода
+			a(class="btn btn_primary_outline" href="#0") Перейти в раздел
+		div(class="home_row")
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news1.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news1.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_black")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news2.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news2.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_black")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+				p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news3.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news3.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_black")
+					a(href="#0") Красная дорожка
+				h3(class="card_title fs_18")
+					a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
+				p(class="card_description") Хроника четвертого дня фестиваля "Жара".
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news4.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news4.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_black")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+	section(class="home_shapter")
+		header(class="home_header")
+			h2(class="home_title fs_36 marker_blue") Красота
+			a(class="btn btn_primary_outline" href="#0") Перейти в раздел
+		div(class="home_row")
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news1.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news1.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_blue")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news2.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news2.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_blue")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+				p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news3.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news3.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_blue")
+					a(href="#0") Красная дорожка
+				h3(class="card_title fs_18")
+					a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
+				p(class="card_description") Хроника четвертого дня фестиваля "Жара".
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+			article(class="card")
+				picture(class="card_picture")
+					source(srcset="./images/main/news4.webp" type="image/webp")
+					img(class="card_image" src="./images/main/news4.jpg" alt="" width="340" height="auto")
+				span(class="card_category fs_24 marker_blue")
+					a(href="#0") Звездные пары
+				h3(class="card_title fs_18")
+					a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+				p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
+				time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+
+
+	section(class="home_shapter")
+		header(class="home_header")
+			h2(class="home_title fs_36 marker_cyan") Галереи
+			a(class="btn btn_primary_outline" href="#0") Перейти в раздел
+		div(class="home_row")
+			article(class="cardgallery")
+				a(class="cardgallery_link" href="#0")
+					picture(class="cardgallery_picture")
+						source(srcset="./images/main/galery1.webp" type="image/webp")
+						img(class="cardgallery_image" src="./images/main/galery1.jpg" alt="" width="710" height="auto")
+					header(class="cardgallery_category fs_24 marker_cyan") Галереи
+					footer(class="cardgallery_footer")
+						h3(class="cardgallery_title fs_36") День отца – 2021
+						time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
+
+			article(class="cardgallery")
+				a(class="cardgallery_link" href="#0")
+					picture(class="cardgallery_picture")
+						source(srcset="./images/main/galery2.webp" type="image/webp")
+						img(class="cardgallery_image" src="./images/main/galery2.jpg" alt="" width="710" height="auto")
+					header(class="cardgallery_category fs_24 marker_cyan") Галереи
+					footer(class="cardgallery_footer")
+						h3(class="cardgallery_title fs_36") День защиты детей – 2021
+						time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
+
+			article(class="cardgallery")
+				a(class="cardgallery_link" href="#0")
+					picture(class="cardgallery_picture")
+						source(srcset="./images/main/galery3.webp" type="image/webp")
+						img(class="cardgallery_image" src="./images/main/galery3.jpg" alt="" width="710" height="auto")
+					header(class="cardgallery_category fs_24 marker_cyan") Галереи
+					footer(class="cardgallery_footer")
+						h3(class="cardgallery_title fs_36") Гости презентации онлайн-кинотеатра
+						time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
+
+			article(class="cardgallery")
+				a(class="cardgallery_link" href="#0")
+					picture(class="cardgallery_picture")
+						source(srcset="./images/main/galery4.webp" type="image/webp")
+						img(class="cardgallery_image" src="./images/main/galery4.jpg" alt="" width="710" height="auto")
+					header(class="cardgallery_category fs_24 marker_cyan") Галереи
+					footer(class="cardgallery_footer")
+						h3(class="cardgallery_title fs_36") Презентация выставки "Женщина в кресле"
+						time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
+		footer(class="home_footer")
+			button(class="btn btn_link") Показать ещё...
+
+	//-SUMMER
+	section(class="home_shapter")
+		h2(class="home_title_center fs_36") К лету готова
+		div(class="home_row")
+			article(class="cardspecial")
+				a(class="cardspecial_link" href="#0")
+					picture(class="cardspecial_picture")
+						source(srcset="./images/main/summer1.webp" type="image/webp")
+						img(class="cardspecial_image" src="./images/main/summer1.jpg" alt="" width="300" height="auto")
+					footer(class="cardspecial_footer")
+						h3(class="cardspecial_title") Уход за кожей и волосами
+						p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
+
+			article(class="cardspecial")
+				a(class="cardspecial_link" href="#0")
+					picture(class="cardspecial_picture")
+						source(srcset="./images/main/summer2.webp" type="image/webp")
+						img(class="cardspecial_image" src="./images/main/summer2.jpg" alt="" width="300" height="auto")
+					footer(class="cardspecial_footer")
+						h3(class="cardspecial_title") Уход за кожей и волосами
+						p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
+
+			article(class="cardspecial")
+				a(class="cardspecial_link" href="#0")
+					picture(class="cardspecial_picture")
+						source(srcset="./images/main/summer3.webp" type="image/webp")
+						img(class="cardspecial_image" src="./images/main/summer3.jpg" alt="" width="300" height="auto")
+					footer(class="cardspecial_footer")
+						h3(class="cardspecial_title") Уход за кожей и волосами
+						p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
+
+			article(class="cardspecial")
+				a(class="cardspecial_link" href="#0")
+					picture(class="cardspecial_picture")
+						source(srcset="./images/main/summer4.webp" type="image/webp")
+						img(class="cardspecial_image" src="./images/main/summer4.jpg" alt="" width="300" height="auto")
+					footer(class="cardspecial_footer")
+						h3(class="cardspecial_title") Уход за кожей и волосами
+						p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
+
+
+	//-POPULAR
+	section(class="home_shapter")
+			h2(class="home_title_center fs_36") Популярное
+			div(class="home_row")
+				article(class="cardpopular")
+					a(class="cardpopular_link" href="#0")
+						picture(class="cardpopular_picture")
+							source(srcset="./images/main/popular1.webp" type="image/webp")
+							img(class="cardpopular_image" src="./images/main/popular1.jpg" alt="" width="300" height="auto")
+						h3(class="cardpopular_title fs_24") Настя Ивлеева, Элджей, Мария Миногарова, Даня Милохин и другие на премьере фильма в Москве
+
+				article(class="cardpopular")
+					a(class="cardpopular_link" href="#0")
+						picture(class="cardpopular_picture")
+							source(srcset="./images/main/popular2.webp" type="image/webp")
+							img(class="cardpopular_image" src="./images/main/popular2.jpg" alt="" width="300" height="auto")
+						h3(class="cardpopular_title fs_24") Мама Тимати Симона Юнусова похвасталась вокальными успехами внучки Алисы
+
+
+	//-INSTAGRAM
+	section(class="home_shapter")
+		h2(class="home_title_center fs_36") Instagram звезд
+		div(class="home_row")
+			article(class="cardinst")
+				a(class="cardinst_link" href="#0")
+					picture(class="cardinst_picture")
+						source(srcset="./images/main/instagram1.webp" type="image/webp")
+						img(class="cardinst_image" src="./images/main/instagram1.jpg" alt="" width="300" height="auto")
+					h3(class="cardinst_title fs_18") @sasha_savelieva
+
+			article(class="cardinst")
+				a(class="cardinst_link" href="#0")
+					picture(class="cardinst_picture")
+						source(srcset="./images/main/instagram2.webp" type="image/webp")
+						img(class="cardinst_image" src="./images/main/instagram2.jpg" alt="" width="300" height="auto")
+					h3(class="cardinst_title fs_18") @sasha_savelieva
+
+			article(class="cardinst")
+				a(class="cardinst_link" href="#0")
+					picture(class="cardinst_picture")
+						source(srcset="./images/main/instagram3.webp" type="image/webp")
+						img(class="cardinst_image" src="./images/main/instagram3.jpg" alt="" width="300" height="auto")
+					h3(class="cardinst_title fs_18") @sasha_savelieva
+
+			article(class="cardinst")
+				a(class="cardinst_link" href="#0")
+					picture(class="cardinst_picture")
+						source(srcset="./images/main/instagram4.webp" type="image/webp")
+						img(class="cardinst_image" src="./images/main/instagram4.jpg" alt="" width="300" height="auto")
+					h3(class="cardinst_title fs_18") @sasha_savelieva
+
+include components/footer.pug
+
+
+
+

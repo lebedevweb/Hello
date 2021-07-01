@@ -1,0 +1,91 @@
+.footer
+  background-color: $primary
+  padding-top: 100px
+  padding-bottom: 100px
+
+  &_container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media only screen and (max-width: 1199px)
+      flex-wrap: wrap
+
+  &_logo
+    display: block
+    width: 180px
+    background-color: $light
+    transition: width .3s ease-out
+
+    @media only screen and (max-width: 1680px)
+      width: 110px
+
+    @media only screen and (max-width: 1199px)
+      order: 1
+
+    & > svg
+      display: block
+      width: 100%
+
+  &_menu
+    display: flex
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
+      flex-wrap: wrap
+      justify-content: center
+      order: 3
+      margin-top: 20px
+
+    &_item
+      list-style: none
+
+      &:not(:last-child)
+        margin-right: 20px
+
+        @media only screen and (max-width: 1680px)
+          margin-right: 15px
+
+      & > a
+        display: block
+        color: $light
+        text-decoration: none
+        font-weight: 600
+        font-size: 14px
+        line-height: 2.8
+        text-transform: uppercase
+        transition: opacity .3s ease-out
+
+        &:hover
+          opacity: .8
+
+
+  &_button
+    display: flex
+    cursor: pointer
+    width: 26px
+    height: 26px
+    padding: 6px
+
+    &:not(:first-child)
+      margin-left: 30px
+
+      @media only screen and (max-width: 1680px)
+        margin-left: 15px
+
+    & > svg
+      display: block
+      width: 100%
+      height: auto
+      fill: $light
+      margin: auto
+      transition: opacity .3s ease-out
+
+      &:hover
+        opacity: .8
+
+    &_container
+      display: flex
+
+      @media only screen and (max-width: 1199px)
+        order: 2

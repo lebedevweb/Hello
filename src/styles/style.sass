@@ -1,0 +1,166 @@
+@import 'variables/fonts'
+@import 'variables/color'
+
+*
+  padding: 0
+  margin: 0
+
+body
+  min-width: 240px
+  background-color: #fff
+  font-family: $font-body
+  font-weight: normal
+  line-height: 1.2
+  color: $primary
+
+  margin-top: 105px
+
+  @media only screen and (max-width: 1680px)
+    margin-top: 79px
+
+h1,h2,h3,h4,h5,h6
+  overflow-wrap: break-word
+  font-family: $font-title
+
+p
+  overflow-wrap: break-word
+  margin: 0
+
+address
+  font-style: normal
+
+input,
+textarea
+  border: solid 0 transparent
+  outline: 0
+
+input, select, textarea
+  font-size: 16px
+
+input[type="number"]
+  appearance: textfield
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  display: none
+
+button
+  border: 0
+  background-color: transparent
+  cursor: pointer
+
+.container
+  box-sizing: border-box
+  max-width: 1450px
+  margin-left: auto
+  margin-right: auto
+
+  @media only screen and (max-width: 1680px)
+    width: 95%
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 1199px)
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 767px)
+    padding-left: 10px
+    padding-right: 10px
+
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.sr-only
+  position: absolute
+  width: 0
+  height: 0
+  padding: 0
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  white-space: nowrap
+  clip-path: inset(50%)
+  border: 0
+
+.marker
+  &_red::before
+    background-color: $red
+
+  &_black::before
+    background-color: black
+
+  &_blue::before
+    background-color: #4B5DFF
+
+  &_cyan::before
+    background-color: #7AC9BB
+
+.fs
+  &_36
+    font-size: 36px
+
+    @media only screen and (max-width: 1680px)
+      font-size: 31px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 26px
+
+    @media only screen and (max-width: 767px)
+      font-size: 21px
+
+  &_24
+    font-size: 24px
+
+    @media only screen and (max-width: 1680px)
+      font-size: 22px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 20px
+
+    @media only screen and (max-width: 767px)
+      font-size: 18px
+
+    @media only screen and (max-width: 319px)
+      font-size: 16px
+
+  &_18
+    font-size: 18px
+
+    @media only screen and (max-width: 1680px)
+      font-size: 17px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+  &_14
+    font-size: 14px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 13px
+
+    @media only screen and (max-width: 767px)
+      font-size: 12px
+
+
+// COMPONENTS
+@import "common/btn"
+@import "common/card"
+@import "common/cardgallery"
+@import "common/cardinst"
+@import "common/cardspecial"
+@import "common/cardpopular"
+@import "common/navbar"
+@import "common/slider"
+@import "common/footer"
+
+// PAGES
+// site
+@import "pages/home"
+@import "pages/page"
+
+
+// panel
+

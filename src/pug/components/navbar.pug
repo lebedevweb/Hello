@@ -1,0 +1,22 @@
+header(class="navbar")
+	div(class="container navbar_container")
+		a(class="navbar_logo" href="#0")
+			span(class="sr-only") Перейти на главную
+			include ../../images/logo.svg
+
+		ul(class="navbar_menu")
+			each val in ['звезды','монархи','мода','свадьбы','дети','красота','стиль жизни','кино','подарки','галереи']
+				li(class="navbar_menu_item")
+					a(href="#0")= val
+
+		div(class="navbar_button_container")
+			div(class="navbar_button")
+				include ../../images/search.svg
+			a(class="navbar_button" href="mailto:infohello@hello.ru")
+				span(class="sr-only") Напишите нам
+				include ../../images/mail.svg
+			div(class="navbar_button")
+				include ../../images/burger.svg
+
+
+

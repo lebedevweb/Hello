@@ -1,0 +1,19 @@
+footer(class="footer")
+	div(class="container footer_container")
+		a(class="footer_logo" href="#0")
+			span(class="sr-only") Перейти на главную
+			include ../../images/logo.svg
+
+		ul(class="footer_menu")
+			each val in ['звезды','монархи','мода','свадьбы','дети','красота','стиль жизни','кино','подарки','галереи']
+				li(class="footer_menu_item")
+					a(href="#0")= val
+
+		div(class="footer_button_container")
+			div(class="footer_button")
+				include ../../images/search.svg
+			a(class="footer_button" href="mailto:infohello@hello.ru")
+				span(class="sr-only") Напишите нам
+				include ../../images/mail.svg
+
+script(src="./js/scripts.min.js")

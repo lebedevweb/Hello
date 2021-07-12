@@ -1,3 +1,55 @@
 .page
-  padding-top: 70px
+  position: relative
+  padding-top: 50px
   padding-bottom: 70px
+
+  &_title
+    font-weight: 400
+    text-align: center
+    margin-bottom: 50px
+
+  &_description
+    margin-bottom: 30px
+
+    & p:nth-child(n+2)
+      margin-top: 20px
+
+
+  &_contacts
+    text-align: center
+
+    @media only screen and (max-width: 767px)
+      padding-left: 10px
+      padding-right: 10px
+
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    &_title
+      font-family: $font-body
+      font-weight: 600
+      //margin-bottom: 10px
+
+    &_description
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      line-height: 2.4
+
+      @media only screen and (max-width: 1199px)
+        overflow-wrap: anywhere
+
+      & > span
+        margin-left: 5px
+        margin-right: 5px
+
+      & > a
+        color: $red
+        text-decoration-color: transparent
+        transition: text-decoration-color .3s ease-out
+
+        &:hover
+          text-decoration-color: inherit
+
+

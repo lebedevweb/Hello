@@ -9,7 +9,7 @@ body
   min-width: 240px
   background-color: #fff
   font-family: $font-body
-  font-weight: normal
+  font-weight: 400
   line-height: 1.2
   color: $primary
 
@@ -17,6 +17,9 @@ body
 
   @media only screen and (max-width: 1680px)
     margin-top: 79px
+
+main
+  display: block
 
 h1,h2,h3,h4,h5,h6
   overflow-wrap: break-word
@@ -36,9 +39,6 @@ textarea
 
 input, select, textarea
   font-size: 16px
-
-input[type="number"]
-  appearance: textfield
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button
@@ -85,7 +85,33 @@ button
   clip-path: inset(50%)
   border: 0
 
+.title
+  display: flex
+  align-items: center
+  font-weight: 400
+
+  &_center
+    text-align: center
+    font-weight: 400
+    margin-bottom: 70px
+
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 56px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 42px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 30px
+
+
 .marker
+  &::before
+    content: ''
+    width: 15px
+    height: 15px
+    margin-right: 7px
+
   &_red::before
     background-color: $red
 
@@ -97,6 +123,12 @@ button
 
   &_cyan::before
     background-color: #7AC9BB
+
+.mb
+  &_70
+    margin-bottom: 70px
+
+
 
 .fs
   &_36
@@ -146,20 +178,30 @@ button
 
 
 // COMPONENTS
+@import "common/archive"
+@import "common/banner"
 @import "common/btn"
+@import "common/calendar"
 @import "common/card"
 @import "common/cardgallery"
 @import "common/cardinst"
+@import "common/cardnews"
 @import "common/cardspecial"
 @import "common/cardpopular"
+@import "common/follow"
 @import "common/navbar"
 @import "common/slider"
+@import "common/sidebar"
+@import "common/topnews"
 @import "common/footer"
 
 // PAGES
 // site
 @import "pages/home"
 @import "pages/page"
+@import "pages/category"
+@import "pages/gallery"
+
 
 
 // panel

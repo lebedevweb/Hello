@@ -35,12 +35,13 @@
     color: $light
 
     &:hover .cardpopular_image
-      transform: scale(1.2)
+      transform: scale(1.2) translate(-42%, -42%)
 
   &_picture
     position: relative
-    display: block
+    width: 100%
     overflow: hidden
+    padding-top: 60.6%
 
     &::before
       content: ''
@@ -53,10 +54,14 @@
       z-index: 1
 
   &_image
-    display: inherit
-    width: 100%
-    height: auto
-    transition: transform .4s ease-out
+    position: absolute
+    display: block
+    top: 50%
+    left: 50%
+    min-width: 102%
+    min-height: 102%
+    transform: scale(1) translate(-50%, -50%)
+    transition: transform .5s ease-out
 
   &_title
     font-family: Montserrat

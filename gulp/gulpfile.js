@@ -7,9 +7,7 @@ const gulp          = require('gulp'),  //Подключаем Gulp
       browserSync   = require('browser-sync').create(), //Синхронизация с браузером
       notify        = require('gulp-notify'),
       sourcemaps    = require('gulp-sourcemaps'), //Создает карту для препроцессоров стилей
-      sass          = require('gulp-sass'), //Sass препроцессор
-      less          = require('gulp-less'), //Less препроцессор
-      stylus        = require('gulp-stylus'), //Stylus препроцессор
+      sass          = require('gulp-sass')(require('sass')), //Sass препроцессор
       babel 		    = require('gulp-babel'),
       rename        = require('gulp-rename'), //Модуль переименовывания файлов
       pug           = require('gulp-pug'),
@@ -56,21 +54,19 @@ gulp.task('html', () => {
 gulp.task('styles', () => {
   return gulp.src(styleFiles)
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-    .pipe(autoprefixer())
-    .pipe(cleancss({
-      level: {
-        2: {
-          all: true,
-          removeUnusedAtRules: false,
-          restructureRules: false
-        }
-      }
-    })) // Opt., comment out when debugging
+    .pipe(sass().on("error", notify.onError()))
+    .pipe(autoprefixer({ cascade: true, grid:true }))
+    // .pipe(cleancss({
+    //   level: {
+    //     2: {
+    //       all: true,
+    //       removeUnusedAtRules: false,
+    //       restructureRules: false
+    //     }
+    //   }
+    // })) // Opt., comment out when debugging
   .pipe(sourcemaps.write())
-  .pipe(rename({
-    suffix: '.min'
-  }))
+  // .pipe(rename({suffix: '.min'}))
   //Выходная папка для стилей
   .pipe(gulp.dest('../build/css'))
   .pipe(browserSync.stream());

@@ -1,0 +1,64 @@
+.archive
+  margin-bottom: 70px
+
+  &_nav
+    margin-bottom: 70px
+
+    &_list
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+    &_item
+      display: block
+      list-style: none
+      margin: 0 10px 20px 10px
+
+      & > a
+        display: block
+        color: inherit
+        text-decoration: none
+        font-weight: 500
+        line-height: 1
+        border: 1px solid $primary
+        padding: 9px
+        transition:
+          property: color, background-color
+          duration: .5s
+          timing-function: ease-out
+
+        &:hover
+          color: $light
+          background-color: $red
+
+        &.current
+          color: $light
+          background-color: $red
+          border-color: $red
+
+
+  & > .calendar
+    width: 21%
+
+    &:nth-child(n+5)
+      margin-top: 70px
+
+    @media only screen and (max-width: 1199px)
+      width: 32%
+
+      &:nth-child(n+4)
+        margin-top: 40px
+
+    @media only screen and (max-width: 767px)
+      width: 48%
+
+      &:nth-child(n+3)
+        margin-top: 40px
+
+    @media only screen and (max-width: 459px)
+      width: 100%
+
+      &:nth-child(n+2)
+        margin-top: 40px
+
+

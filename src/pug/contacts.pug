@@ -1,0 +1,50 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		main(class="container page")
+			h1(class="page_title fs_36") Контакты
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") ШЕФ-РЕДАКТОР ЖУРНАЛА HELLO! И САЙТА HELLO.RU
+				address(class="page_contacts_description fs_18") Марина Савельева
+					span /
+					a(href="mailto:marina.savelieva@hellomagrussia.com") marina.savelieva@hellomagrussia.com
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") ЗАМЕСТИТЕЛЬ ШЕФ-РЕДАКТОРА
+				address(class="page_contacts_description fs_18") Галина Крючкова
+					span /
+					a(href="mailto:galina.kruchkova@hellomagrussia.com") galina.kruchkova@hellomagrussia.com
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") РУКОВОДИТЕЛЬ ОТДЕЛА МОДЫ И КРАСОТЫ
+				address(class="page_contacts_description fs_18") Анна Федюнина
+					span /
+					a(href="mailto:anna.fedyunina@hellomagrussia.com") anna.fedyunina@hellomagrussia.com
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") РЕДАКТОР НОВОСТЕЙ HELLO.RU
+				address(class="page_contacts_description fs_18") Ольга Кусикова
+					span /
+					a(href="mailto:olga.kusikova@hellomagrussia.com") olga.kusikova@hellomagrussia.com
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") СПЕЦИАЛИСТ ПО SMM
+				address(class="page_contacts_description fs_18") Юлия Григорьева
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") РЕКЛАМА
+				address(class="page_contacts_description fs_18") Мария Демушкина, коммерческий директор
+					span /
+					a(href="mailto:maria.demushkina@hellomagrussia.com") maria.demushkina@hellomagrussia.com
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") PR И МАРКЕТИНГ
+				address(class="page_contacts_description fs_18") Евгения Головко, руководитель отдела
+					span /
+					a(href="mailto:eugenia.golovko@hellomagrussia.com") eugenia.golovko@hellomagrussia.com
+
+			include components/follow.pug
+
+		include components/footer.pug

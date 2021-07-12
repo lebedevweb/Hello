@@ -2,53 +2,7 @@
   position: relative
   display: flex
   justify-content: space-between
-  align-items: end
-
-  &_topnews
-    box-sizing: border-box
-    width: 35%
-    padding-right: 2%
-
-    @media only screen and (max-width: 1680px)
-      width: 40%
-
-    @media only screen and (max-width: 1199px)
-      display: none
-
-    &_title
-      font-family: $font-title2
-      font-size: 24px
-      margin-bottom: 30px
-
-      @media only screen and (max-width: 1680px)
-        font-size: 20px
-        margin-bottom: 20px
-
-    &_list
-      list-style-type: "\2014"
-
-    &_item
-      list-style-position: inside
-
-      &:not(:last-child)
-        margin-bottom: 30px
-
-        @media only screen and (max-width: 1680px)
-          margin-bottom: 10px
-
-      & > a
-        color: inherit
-        font-size: 14px
-        text-decoration-color: transparent
-        transition: text-decoration-color .3s ease-out
-        margin-left: 10px
-
-        &:hover
-          text-decoration-color: $primary
-
-        @media only screen and (max-width: 1680px)
-          font-size: 12px
-
+  align-items: flex-end
 
   &_article
     width: 65%
@@ -61,19 +15,22 @@
 
     &_header
       position: relative
-
-    &_picture
-      display: block
       box-shadow: 20px -20px #d0d9e8
       width: 100%
+      padding-top: 65%
+      overflow: hidden
 
       @media only screen and (max-width: 1199px)
         box-shadow: none
 
     &_image
+      position: absolute
       display: block
-      width: inherit
-      height: auto
+      top: 50%
+      left: 50%
+      min-width: 102%
+      min-height: 102%
+      transform: translate(-50%, -50%)
 
     &_badge
       position: absolute

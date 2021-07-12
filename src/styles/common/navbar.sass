@@ -10,12 +10,14 @@
 
   &_container
     display: flex
-    justify-content: space-between
+    //justify-content: space-between
     align-items: center
 
   &_logo
     display: block
+    float: left
     width: 180px
+    margin-right: 20px
     transition: width .3s ease-out
 
     @media only screen and (max-width: 1680px)
@@ -26,12 +28,15 @@
       width: 100%
 
   &_menu
+    float: left
     display: flex
+    margin-left: auto
 
     @media only screen and (max-width: 1199px)
       display: none
 
     &_item
+      float: left
       list-style: none
 
       &:not(:first-child)
@@ -52,6 +57,7 @@
           color: $red
 
   &_button
+    float: left
     display: flex
     cursor: pointer
     width: 26px
@@ -82,4 +88,6 @@
 
     &_container
       display: flex
+      float: right
+      margin-left: auto
 

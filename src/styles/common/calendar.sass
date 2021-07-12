@@ -1,0 +1,90 @@
+.calendar
+
+  &_caption
+    display: block
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 10px
+
+  &_table
+    text-align: center
+    font-weight: 500
+    width: 100%
+    border-collapse: collapse
+
+
+  &_header
+    text-transform: uppercase
+    border-bottom: 1px solid $primary
+
+    tr > th
+      font-weight: 500
+
+      &:nth-child(n+6)
+        color: $red
+
+  &_body
+    & > tr
+
+      & > td
+        padding-top: 4px
+        padding-bottom: 4px
+
+        &:nth-last-child(-n+2)
+          color: $red
+
+        & > span
+          display: block
+          width: 25px
+          height: 25px
+          line-height: 1.4
+          margin-left: auto
+          margin-right: auto
+
+          @media only screen and (max-width: 1199px)
+            width: 20px
+            height: 20px
+            line-height: 1.3
+
+          @media only screen and (max-width: 767px)
+            //width: 20px
+            //height: 20px
+            line-height: 1.3
+
+          & > a
+            color: inherit
+            text-decoration: none
+
+  &_few,
+  &_many
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      z-index: -1
+
+    @media only screen and (max-width: 1199px)
+      &::before
+        width: 20px
+        height: 20px
+
+  &_few::before
+    background-color: $lpink
+
+  &_many
+    color: $light
+
+    &::before
+      background-color: $pink
+
+
+
+

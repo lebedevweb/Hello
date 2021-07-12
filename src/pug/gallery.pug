@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+
+		div(class="container row page")
+			main(class="gallery")
+				h1(class="title fs_36 mb_70") Галереи
+				ul(class="gallery_list row")
+					- let link = './images/gallery/'
+					- let images = ['01.webp','02.webp','03.webp','04.webp','05.webp','06.webp','07.webp','08.webp']
+					-let title = ['день отца-2021','Принцу Филиппу – 100 лет: 30 фотографий мужа королевы Елизаветы II в кругу семьи','день защиты детей-2021','20 самых ярких и запоминающихся образов королевы Максимы','Вера Брежнева, Кэти Перри, Деми Мур, Селин Дион, Кэти Холмс и другие отметили День Матери','С Днем Победы: как 9 мая отметили Валерия, Иосиф Пригожин, Максим Галкин, Ирина Горбачева и другие звезды','Бессмертный полк: Дима Билан, Светлана Бондарчук, Максим Галкин, Юлия Высоцкая и другие звезды рассказали о своих ветеранах','Гости презентации онлайн-кинотеатра']
+					- for (let i = 0; i < images.length; i++)
+						li(class="gallery_item")
+							div(class="gallery_image_container")
+								img(class="gallery_image" alt="" src= link + images[i] width="500" height="300")
+							h2(class="gallery_title")
+								a(class="gallery_link" href="#0")= title[i]
+
+				div(class="gallery_footer")
+					button(class="btn btn_link") Показать еще...
+
+
+
+			include components/sidebar.pug
+		include components/footer.pug

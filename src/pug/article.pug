@@ -1,0 +1,25 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+
+		div(class="container row page")
+			div(class="row")
+				section(class="share")
+					h2(class="sr-only") Поделиться в сети
+					ul(class="share_list")
+						li(class="share_item")
+
+				main(class="article")
+					div
+						img(class="page_image" alt="" src="" width="500" height="300")
+					h1(class="title fs_36 mb_70") Галереи
+
+
+
+
+
+
+			include components/sidebar.pug
+		include components/footer.pug

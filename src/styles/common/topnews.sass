@@ -1,0 +1,33 @@
+.topnews
+  box-sizing: border-box
+
+  &_title
+    font-family: $font-title2
+    margin-bottom: 30px
+
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 20px
+
+  &_list
+    list-style-type: "\2014"
+
+  &_item
+    list-style-position: inside
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+      @media only screen and (max-width: 1680px)
+        margin-bottom: 10px
+
+    & > a
+      color: inherit
+      text-decoration-color: transparent
+      transition: text-decoration-color .3s ease-out
+      margin-left: 10px
+
+      &:hover
+        text-decoration-color: $primary
+
+      @media only screen and (max-width: 1680px)
+        font-size: 12px

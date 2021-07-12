@@ -1,0 +1,51 @@
+.gallery
+  width: 74%
+
+  @media only screen and (max-width: 1199px)
+    width: 100%
+
+  &_list
+    list-style: none
+
+  &_item
+    display: block
+    width: 46%
+    margin-bottom: 30px
+
+    &:hover .gallery_image
+      transform: scale(1.2) translate(-42%, -42%)
+
+    @media only screen and (max-width: 767px)
+      width: 100%
+
+  &_image
+    position: absolute
+    display: block
+    top: 50%
+    left: 50%
+    min-width: 102%
+    min-height: 102%
+    transform: scale(1) translate(-50%, -50%)
+    transition: transform .5s ease-out
+
+    &_container
+      position: relative
+      width: 100%
+      overflow: hidden
+      padding-top: 60%
+      margin-bottom: 10px
+
+  &_title
+    text-align: center
+
+
+  &_link
+    color: inherit
+    text-decoration-color: transparent
+    transition: text-decoration-color .3s ease-out
+
+    &:hover
+      text-decoration-color: inherit
+
+  &_footer
+    text-align: center

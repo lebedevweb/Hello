@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		main(class="container page")
+			h1(class="page_title fs_36") Правовая информация
+
+			div(class="page_description")
+				p HELLO.RU - ежедневно обновляемый информационно-развлекательный интернет-ресурс о жизни российских и зарубежных знаменитостей.
+				p Все материала интернет-ресурса HELLO.RU принадлежат или контролируются Обществом с ограниченной ответственностью «Медиа Технология».
+				p Вся информация и материалы HELLO.RU защищены российским и международным законодательством об авторском праве и смежных правах.
+				p Использование любых материалов HELLO.RU разрешается только с письменного согласия ООО «Медиа Технология» и при наличии гиперссылки на hello.ru.
+				p Мнение ООО «Медиа Технология» может не совпадать с мнениями интернет-пользователей, размещаемыми в разделах «Комментарии» к материалам hello.ru.
+				p Общество с ограниченной ответственностью «Медиа Технология»
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") Адрес места нахождения:
+				address(class="page_contacts_description fs_18") 107113, Москва, ул. Лобачика, 11, этаж 4, пом. XXIII, к. 75
+
+			article(class="page_contacts")
+				h2(class="page_contacts_title fs_18") E-mail:
+				address(class="page_contacts_description fs_18")
+					a(href="mailto:editorial@hellomagrussia.com") editorial@hellomagrussia.com
+
+			include components/follow.pug
+
+		include components/footer.pug
+
+

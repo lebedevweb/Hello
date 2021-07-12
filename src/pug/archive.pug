@@ -1,0 +1,132 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		main(class="container page")
+			h1(class="page_title fs_36") Архив статей
+			nav(class="archive_nav")
+				ul(class="archive_nav_list")
+					li(class="archive_nav_item")
+						a(class="fs_18 current" href="#0") 2021
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2020
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2019
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2018
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2017
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2016
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2015
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2014
+
+					li(class="archive_nav_item")
+						a(class="fs_18" href="#0") 2013
+
+			div(class="row archive")
+				each month in ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]
+					div(class="calendar")
+						table(class="calendar_table fs_18")
+							caption
+								span(class="calendar_caption") 2021
+								span(class="calendar_caption")= month
+							thead(class="calendar_header")
+								tr
+									th(scope="col" title="Понедельник") Пн
+									th(scope="col" title="Вторник") Вт
+									th(scope="col" title="Среда") Ср
+									th(scope="col" title="Четверг") Чт
+									th(scope="col" title="Пятница") Пт
+									th(scope="col" title="Суббота") Сб
+									th(scope="col" title="Воскресенье") Вс
+							tbody(class="calendar_body")
+								tr
+									td(colspan="4" class="pad")
+									td
+										span(class="calendar_few")
+											a(href="#0" aria-label="Записи, опубликованные 01.01.2021") 1
+									td
+										span(class="calendar_many")
+											a(href="#0" aria-label="Записи, опубликованные 02.01.2021") 2
+									td
+										span 3
+								tr
+									td
+										span 4
+									td
+										span 5
+									td
+										span 6
+									td
+										span 7
+									td
+										span 8
+									td
+										span 9
+									td
+										span 10
+								tr
+									td
+										span(class="calendar_few")
+											a(href="#0" aria-label="Записи, опубликованные 11.01.2021") 11
+									td
+										span(class="calendar_few")
+											a(href="#0" aria-label="Записи, опубликованные 12.01.2021") 12
+									td
+										span(class="calendar_many")
+											a(href="#0" aria-label="Записи, опубликованные 13.01.2021") 13
+									td
+										span(class="calendar_few")
+											a(href="#0" aria-label="Записи, опубликованные 14.01.2021") 14
+									td
+										span(class="calendar_few")
+											a(href="#0" aria-label="Записи, опубликованные 15.01.2021") 15
+									td
+										span 16
+									td
+										span 17
+								tr
+									td
+										span 18
+									td
+										span 19
+									td
+										span 20
+									td
+										span 21
+									td
+										span 22
+									td
+										span 23
+									td
+										span 24
+								tr
+									td
+										span 25
+									td
+										span 26
+									td
+										span 27
+									td
+										span 28
+									td
+										span 29
+									td
+										span 30
+									td
+										span 31
+
+
+
+		include components/footer.pug

@@ -1,91 +1,73 @@
 .card
-  max-width: 340px
+  width: 46%
+
+  &:nth-child(n+3)
+    margin-top: 60px
 
   &:hover .card_image
-    transform: scale(1.2) translate(-42%, -42%)
+    transform: scale(1.1)
+
+  @media only screen and (max-width: 1680px)
+    &:nth-child(n+3)
+      margin-top: 50px
+
+  @media only screen and (max-width: 1199px)
+    &:nth-child(n+3)
+      margin-top: 40px
+
+  @media only screen and (max-width: 767px)
+    &:nth-child(n+3)
+      margin-top: 30px
+
+  @media only screen and (max-width: 400px)
+    width: 100%
+    &:nth-child(n+2)
+      margin-top: 30px
+
+
 
   &_picture
     position: relative
+    display: block
     width: 100%
+    padding-top: 60%
     overflow: hidden
-    padding-top: 59%
-    margin-bottom: 20px
+    margin-bottom: 10px
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 120%)
+      z-index: 1
 
   &_image
     position: absolute
     display: block
-    top: 50%
-    left: 50%
-    min-width: 102%
-    min-height: 102%
-    transform: scale(1) translate(-50%, -50%)
-    transition: transform .5s ease-out
-
-
-
-  &_category
-    display: flex
-    align-items: center
-    font-family: $font-title
-    font-weight: 400
-    margin-bottom: 15px
-
-    & > a
-      color: inherit
-      text-decoration-color: transparent
-      transition: text-decoration-color .3s ease-out
-
-      &:hover
-        text-decoration-color: $primary
-
-    &::before
-      content: ''
-      width: 15px
-      height: 15px
-      margin-right: 7px
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center top
+    transition: transform .8s ease-out
 
   &_title
     font-family: $font-body
-    font-weight: 600
-    margin-bottom: 20px
+    font-weight: 700
 
     & > a
       color: inherit
       text-decoration-color: transparent
-      transition: text-decoration-color .3s ease-out
+      transition: text-decoration-color .4s ease-out
 
       &:hover
-        text-decoration-color: $primary
+        text-decoration-color: inherit
 
-  &_description
-    margin-bottom: 20px
 
-  &_time
-    color: $date
-    text-transform: uppercase
 
-  &_row
-    @media only screen and (max-width: 1199px)
-      justify-content: space-around
-
-    & > .card
-      width: 24%
-
-      @media only screen and (max-width: 1199px)
-        width: 32%
-
-        &:last-child
-          margin-top: 30px
-
-      @media only screen and (max-width: 767px)
-        width: 45%
-
-        &:nth-child(n+3)
-          margin-top: 30px
-
-      @media only screen and (max-width: 520px)
-        width: 100%
-
-        &:nth-child(n+2)
-          margin-top: 30px
 

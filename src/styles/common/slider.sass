@@ -3,8 +3,19 @@
   display: flex
   justify-content: space-between
   align-items: flex-end
+  margin-bottom: 90px
+
+  @media only screen and (max-width: 1680px)
+    margin-bottom: 74px
+
+  @media only screen and (max-width: 1199px)
+    margin-bottom: 58px
+
+  @media only screen and (max-width: 767px)
+    margin-bottom: 40px
 
   &_article
+    display: none
     width: 65%
 
     @media only screen and (max-width: 1680px)
@@ -13,24 +24,34 @@
     @media only screen and (max-width: 1199px)
       width: 100%
 
+    &.active
+      display: block
+
     &_header
-      position: relative
-      box-shadow: 20px -20px #d0d9e8
+      //box-shadow: 20px -20px #d0d9e8
       width: 100%
-      padding-top: 65%
-      overflow: hidden
+
 
       @media only screen and (max-width: 1199px)
-        box-shadow: none
+        box-shadow: none!important
+
+    &_link
+      display: block
+      position: relative
+      width: 100%
+      padding-top: 66%
+      overflow: hidden
 
     &_image
       position: absolute
       display: block
-      top: 50%
-      left: 50%
-      min-width: 102%
-      min-height: 102%
-      transform: translate(-50%, -50%)
+      top: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: top
+
 
     &_badge
       position: absolute
@@ -63,22 +84,12 @@
 
     &_category
       display: block
-      font-family: $font-title
-      font-size: 36px
+      font: 400 30px $font-title
+      text-transform: uppercase
       margin-bottom: 24px
 
       & > a
         color: inherit
-
-      @media only screen and (max-width: 1680px)
-        font-size: 30px
-        margin-bottom: 14px
-
-      @media only screen and (max-width: 1199px)
-        font-size: 25px
-
-      @media only screen and (max-width: 767px)
-        font-size: 20px
 
     &_footer
       text-align: left
@@ -87,25 +98,14 @@
         text-align: center
 
 
-
     &_title
       font-family: $font-title
-      font-weight: 700
-      font-size: 34px
+      font-weight: 500
       line-height: 1
 
       & > a
         color: inherit
         text-decoration: none
-
-      @media only screen and (max-width: 1680px)
-        font-size: 30px
-
-      @media only screen and (max-width: 1199px)
-        font-size: 25px
-
-      @media only screen and (max-width: 767px)
-        font-size: 20px
 
   &_dots
     position: absolute
@@ -137,6 +137,7 @@
       top: 33%
 
     &_item
+      cursor: pointer
       display: block
       width: 10px
       height: 10px

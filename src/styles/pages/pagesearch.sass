@@ -1,0 +1,75 @@
+.pagesearch
+  width: 74%
+  min-height: calc(60vh)
+
+  @media only screen and (max-width: 1199px)
+    width: 100%
+
+  & > .title
+    text-transform: none
+    margin-bottom: 45px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 20px
+
+  &_form
+    max-width: 616px
+    text-align: center
+    margin-bottom: 90px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 50px
+
+    &_container
+      display: flex
+      margin-bottom: 30px
+
+
+    &_input
+      display: block
+      width: calc(100% - 40px)
+      font-size: 20px
+      color: $date
+      background-color: transparent
+      border-bottom: 2px solid $primary
+      padding: 15px 10px
+
+      &:focus,
+      &:focus-visible,
+      &:focus-within
+        &::placeholder
+          color: transparent
+
+
+    &_button
+      color: $primary
+      border-bottom: 2px solid $primary
+      padding: 20px
+      background-repeat: no-repeat
+      background-size: 60%
+      background-position: center
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M39.94,35.85,20.43,16.29A22.35,22.35,0,0,0,25.09,2.54,22.56,22.56,0,1,0,2.53,25.11a22.31,22.31,0,0,0,13.75-4.67L35.79,40h.88l3.27-3.25v-.21a.79.79,0,0,0,0-.48Zm-25.5-21.4a16.84,16.84,0,0,1-23.82,0,16.87,16.87,0,0,1-4.93-12A16.84,16.84,0,0,1,2.53-14.43h0A16.84,16.84,0,0,1,19.37,2.42h0A16.61,16.61,0,0,1,14.44,14.45Z' transform='translate(20.02 20.03)' style='fill:%232b2b2b'/%3E%3C/svg%3E")
+
+    &_location
+      text-align: left
+
+      &_title
+        display: inline-block
+        font-family: $font-body
+        font-weight: 500
+        font-size: 16px
+        text-transform: uppercase
+
+        &:first-child
+          margin-right: 20px
+
+        & > a
+          color: inherit
+          text-decoration-color: transparent
+          transition: color .4s ease-out, text-decoration-color .4s ease-out
+
+          &:hover
+            text-decoration-color: inherit
+
+        &.current
+          color: $red

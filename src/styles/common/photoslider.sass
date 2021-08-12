@@ -1,0 +1,63 @@
+.photoslider
+
+  &_header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+  &_list
+    display: block
+    list-style: none
+    width: 77.6%
+
+  &_item
+    position: relative
+    display: none
+    width: 100%
+    padding-top: 76%
+    transition: height .3s ease-out
+
+    &.active
+      display: block
+      animation-name: Opacity
+      animation-duration: .8s
+      animation-timing-function: ease-out
+
+
+    & > img
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: contain
+      object-position: center
+
+  &_back,
+  &_next
+    display: flex
+    align-items: center
+    width: 50px
+    cursor: pointer
+    opacity: .5
+    transition: opacity .5s ease-out
+
+    & > svg
+      width: 100%
+
+    &:hover
+      opacity: 1
+
+  &_counter
+    text-align: center
+    font-weight: 500
+    margin-bottom: 30px
+
+  &_current
+    color: $red
+
+  &_footer
+    color: $date
+    font-weight: 500
+    text-align: center

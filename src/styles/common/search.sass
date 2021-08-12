@@ -1,0 +1,96 @@
+.search
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($primary,.9)
+  backdrop-filter: blur(15px)
+  z-index: 1200
+
+  &.active
+    display: block
+
+  &_header
+    display: flex
+    justify-content: flex-end
+
+  &_close
+    color: $light
+    cursor: pointer
+    padding: 5px 20px
+    font-size: 50px
+
+  &_body
+    display: flex
+    height: calc(100% - 70px)
+
+    &_container
+      width: 35%
+      margin: auto
+
+      @media only screen and (max-width: 1680px)
+        width: 50%
+
+      @media only screen and (max-width: 1199px)
+        width: 70%
+
+      @media only screen and (max-width: 767px)
+        width: 90%
+
+  &_title
+    color: $light
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 30px
+
+  &_subtitle
+    color: $light
+    font-family: $font-body
+    font-weight: 500
+    margin-bottom: 20px
+
+
+  &_form
+    display: flex
+    width: 100%
+    margin-bottom: 50px
+    text-align: center
+
+    //@media only screen and (max-width: 767px)
+    //  flex-wrap: wrap
+    //
+    //  & > .btn
+    //    display: block
+    //    width: 100%
+
+
+  &_input
+    display: block
+    width: calc(100% - 40px)
+    color: $light
+    background-color: transparent
+    border-bottom: 2px solid $light
+    padding: 10px 15px
+
+    //@media only screen and (max-width: 767px)
+    //  margin-bottom: 20px
+
+  &_list
+    list-style: none
+    padding-left: 10px
+
+  &_item
+    display: block
+    & > a
+      display: block
+      color: $light
+      text-decoration: none
+      padding-top: 5px
+      padding-bottom: 5px
+      transition: color .5s ease-out
+
+      &:hover
+        color: $red
+

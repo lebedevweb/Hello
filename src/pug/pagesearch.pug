@@ -1,0 +1,98 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+		div(class="container row page")
+			main(class="pagesearch")
+				h1(class="title fs_36") Результаты поиска
+				form(class="pagesearch_form")
+					div(class="pagesearch_form_container")
+						input(class="pagesearch_form_input" type="text" name="query" placeholder="Найти..." required)
+						button(class="btn pagesearch_form_button" type="submit")
+
+					div(class="pagesearch_form_location")
+						h2(class="pagesearch_form_location_title current") Статьи
+						h2(class="pagesearch_form_location_title")
+							a(href="/search/?query=he&amp;location=gallery") Галереи
+
+				div(id="results" class="pagesearch_results")
+
+					div(class="cardnews_row row mb_70")
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/01.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Красная дорожка
+								h2(class="cardnews_title fs_18")
+									a(href="#0") Зендая, Lil Nas X, Сиара, Карди Би и другие на премии BET Awards 2021
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
+
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/02.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Звездные пары
+								h2(class="cardnews_title fs_18")
+									a(href="#0") Ромео Бекхэм и его девушка Миа Реган впервые вместе вышли в свет
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 18:45
+
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/03.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Красная дорожка
+								h2(class="cardnews_title fs_18")
+									a(href="#0") Наоми Кэмпбелл впервые вышла в свет после рождения дочери
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 17:26") 28 июня 2021 / 17:26
+
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/04.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Звездные пары
+								h2(class="cardnews_title fs_18")
+									a(href="#0") Евротур: Джастин и Хейли Бибер улетели отдыхать в Грецию
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
+
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/05.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Красная дорожка
+
+								h2(class="cardnews_title fs_18")
+									a(href="#0") Глюк’oZa, Ксения Собчак, Манижа, Елка и другие на закрытии фестиваля "Жара"
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
+
+						article(class="cardnews row")
+							a(class="cardnews_picture" href="#0")
+								img(class="cardnews_image" loading="lazy" alt="" src="./images/category/06.jpg" width="550" height="300")
+							div(class="cardnews_content")
+								p(class="cardnews_category fs_18")
+									a(href="#0") Звездные пары
+								h2(class="cardnews_title fs_18")
+									a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+								footer(class="cardnews_footer row")
+									time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 18:45
+
+
+			include components/sidebarBanner.pug
+
+
+
+		include components/footer.pug
+		include components/scrolltop.pug

@@ -1,0 +1,108 @@
+.fashion
+  width: 25%
+
+  @media only screen and (max-width: 579px)
+    width: 60%
+
+    &:nth-child(n+2)
+      margin-top: 40px
+
+  @media only screen and (max-width: 319px)
+    width: 100%
+
+
+  &_container
+    position: relative
+    background-color: $primary
+    padding: 20px 11% 40px 9.6%
+
+    @media only screen and (max-width: 579px)
+      padding: 20px 11% 80px 9.6%
+
+      & > .row
+        justify-content: center
+
+    &_title
+      color: $light
+      font-family: $font-title2
+      font-size: 48px
+      font-weight: 400
+      text-transform: uppercase
+      text-align: center
+      letter-spacing: 0.1em
+      margin-bottom: 50px
+
+      @media only screen and (max-width: 920px)
+        font-size: 36px
+
+      @media only screen and (max-width: 767px)
+        font-size: 26px
+
+      @media only screen and (max-width: 579px)
+        font-size: 20px
+
+
+      & > span
+        display: inline-block
+        border-right: 1px solid $light
+        border-left: 1px solid $light
+        padding-right: 10px
+        padding-left: 10px
+        margin-right: auto
+        margin-left: auto
+
+  &_link
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    box-shadow: 15px -15px 0 -1px $primary, 15px -15px 0 0 $light
+    padding-top: 160%
+    margin-bottom: 15px
+
+
+  &_image
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center top
+
+  &_title
+    font-family: $font-body
+    font-weight: 400
+    text-align: center
+    letter-spacing: 1px
+
+    & > a
+      color: $light
+      text-decoration-color: transparent
+      transition: text-decoration-color .4s ease-out
+
+      &:hover
+        text-decoration-color: inherit
+
+  &_category
+    display: block
+    position: absolute
+    box-sizing: border-box
+    bottom: 10px
+    right: 10px
+    text-decoration: none
+    border: 1px solid $light
+    padding: 24px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 25%
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.06 20.71'%3E%3Cpolygon points='11.06 10.36 0.71 20.71 0 20 9.65 10.36 0 0.71 0.71 0 11.06 10.36' style='fill:%23fff'/%3E%3C/svg%3E")
+    transition: background-color .5s ease-out
+
+    &:hover
+      background-color: rgba($light,.2)
+
+
+
+

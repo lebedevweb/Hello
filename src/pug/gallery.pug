@@ -3,25 +3,46 @@ html(lang="ru")
 	include components/header.pug
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
 
-		div(class="container row page")
-			main(class="gallery")
-				h1(class="title fs_36 mb_70") Галереи
-				ul(class="gallery_list row")
-					- let link = './images/gallery/'
-					- let images = ['01.webp','02.webp','03.webp','04.webp','05.webp','06.webp','07.webp','08.webp']
-					-let title = ['день отца-2021','Принцу Филиппу – 100 лет: 30 фотографий мужа королевы Елизаветы II в кругу семьи','день защиты детей-2021','20 самых ярких и запоминающихся образов королевы Максимы','Вера Брежнева, Кэти Перри, Деми Мур, Селин Дион, Кэти Холмс и другие отметили День Матери','С Днем Победы: как 9 мая отметили Валерия, Иосиф Пригожин, Максим Галкин, Ирина Горбачева и другие звезды','Бессмертный полк: Дима Билан, Светлана Бондарчук, Максим Галкин, Юлия Высоцкая и другие звезды рассказали о своих ветеранах','Гости презентации онлайн-кинотеатра']
-					- for (let i = 0; i < images.length; i++)
-						li(class="gallery_item")
-							div(class="gallery_image_container")
-								img(class="gallery_image" alt="" src= link + images[i] width="500" height="300")
-							h2(class="gallery_title")
-								a(class="gallery_link" href="#0")= title[i]
+		main(class="container page")
+			h1(class="title fs_36 mb_70") Галереи
+			div(class="row mb_70")
+				div(class="gallery")
 
-				div(class="gallery_footer")
-					button(class="btn btn_link") Показать еще...
-
+					ul(class="gallery_list row")
+						- let link = './images/gallery/'
+						- let images = ['01.webp','02.webp','03.webp','04.webp','05.webp','06.webp','07.webp','08.webp']
+						-let title = ['день отца-2021','Принцу Филиппу – 100 лет: 30 фотографий мужа королевы Елизаветы II в кругу семьи','день защиты детей-2021','20 самых ярких и запоминающихся образов королевы Максимы','Вера Брежнева, Кэти Перри, Деми Мур, Селин Дион, Кэти Холмс и другие отметили День Матери','С Днем Победы: как 9 мая отметили Валерия, Иосиф Пригожин, Максим Галкин, Ирина Горбачева и другие звезды','Бессмертный полк: Дима Билан, Светлана Бондарчук, Максим Галкин, Юлия Высоцкая и другие звезды рассказали о своих ветеранах','Гости презентации онлайн-кинотеатра']
+						- for (let i = 0; i < images.length; i++)
+							li(class="gallery_item")
+								div(class="gallery_image_container")
+									img(class="gallery_image" loading="lazy" alt="" src= link + images[i] width="500" height="300")
+								h2(class="gallery_title fs_18")
+									a(class="gallery_link" href="#0")= title[i]
 
 
-			include components/sidebar.pug
+
+				include components/sidebarTop.pug
+
+
+
+			div(class="row mb_70")
+				div(class="gallery")
+
+					ul(class="gallery_list row")
+						- for (let i = 0; i < images.length; i++)
+							li(class="gallery_item")
+								div(class="gallery_image_container")
+									img(class="gallery_image" loading="lazy" alt="" src= link + images[i] width="500" height="300")
+								h2(class="gallery_title fs_18")
+									a(class="gallery_link" href="#0")= title[i]
+
+
+
+				include components/sidebarBanner.pug
+
+
 		include components/footer.pug
+		include components/scrolltop

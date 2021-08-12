@@ -9,7 +9,7 @@ body
   min-width: 240px
   background-color: #fff
   font-family: $font-body
-  font-weight: 400
+  font-weight: 500
   line-height: 1.2
   color: $primary
 
@@ -17,6 +17,9 @@ body
 
   @media only screen and (max-width: 1680px)
     margin-top: 79px
+
+  @media only screen and (max-width: 767px)
+    margin-top: 68px
 
 main
   display: block
@@ -88,21 +91,29 @@ button
 .title
   display: flex
   align-items: center
+  font-family: $font-title
   font-weight: 400
+  text-transform: uppercase
 
   &_center
     text-align: center
+    font-family: $font-title
     font-weight: 400
+    font-size: 30px
     margin-bottom: 70px
+    text-transform: uppercase
 
     @media only screen and (max-width: 1680px)
       margin-bottom: 56px
+      font-size: 26px
 
     @media only screen and (max-width: 1199px)
       margin-bottom: 42px
+      font-size: 22px
 
     @media only screen and (max-width: 767px)
       margin-bottom: 30px
+      font-size: 18px
 
 
 .marker
@@ -128,6 +139,15 @@ button
   &_70
     margin-bottom: 70px
 
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 50px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 40px
+
+
+  &_40
+    margin-bottom: 40px
 
 
 .fs
@@ -165,42 +185,58 @@ button
       font-size: 17px
 
     @media only screen and (max-width: 1199px)
-      font-size: 16px
+      font-size: 15px
+
+    @media only screen and (max-width: 767px)
+      font-size: 14px
 
   &_14
     font-size: 14px
 
-    @media only screen and (max-width: 1199px)
+    @media only screen and (max-width: 1680px)
       font-size: 13px
 
-    @media only screen and (max-width: 767px)
+    @media only screen and (max-width: 1199px)
       font-size: 12px
+
+    @media only screen and (max-width: 767px)
+      font-size: 11px
 
 
 // COMPONENTS
+@import "common/animation"
 @import "common/archive"
 @import "common/banner"
+@import "common/beauty"
 @import "common/btn"
 @import "common/calendar"
 @import "common/card"
-@import "common/cardgallery"
-@import "common/cardinst"
+@import "common/cardcustom"
 @import "common/cardnews"
 @import "common/cardspecial"
-@import "common/cardpopular"
+@import "common/fashion"
 @import "common/follow"
+@import "common/heroes"
 @import "common/navbar"
+@import "common/readmore"
+@import "common/photoslider"
 @import "common/slider"
+@import "common/share"
+@import "common/scrolltop"
+@import "common/search"
 @import "common/sidebar"
+@import "common/sidenav"
 @import "common/topnews"
 @import "common/footer"
 
 // PAGES
 // site
+@import "pages/article"
 @import "pages/home"
 @import "pages/page"
 @import "pages/category"
 @import "pages/gallery"
+@import "pages/pagesearch"
 
 
 

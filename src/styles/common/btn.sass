@@ -31,6 +31,25 @@
       &:hover
         background-color: rgba($primary,.1)
 
+  &_light
+    &_outline
+      color: $light
+      border: 1px solid $light
+      padding: 10px 20px
+
+      &:hover
+        background-color: rgba($light,.1)
+
+  &_search
+    color: $light
+    border-bottom: 2px solid $light
+    padding: 20px
+    background-repeat: no-repeat
+    background-size: 60%
+    background-position: center
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M39.94,35.85,20.43,16.29A22.35,22.35,0,0,0,25.09,2.54,22.56,22.56,0,1,0,2.53,25.11a22.31,22.31,0,0,0,13.75-4.67L35.79,40h.88l3.27-3.25v-.21a.79.79,0,0,0,0-.48Zm-25.5-21.4a16.84,16.84,0,0,1-23.82,0,16.87,16.87,0,0,1-4.93-12A16.84,16.84,0,0,1,2.53-14.43h0A16.84,16.84,0,0,1,19.37,2.42h0A16.61,16.61,0,0,1,14.44,14.45Z' transform='translate(20.02 20.03)' style='fill:%23fff'/%3E%3C/svg%3E")
+
+
   &_link
     color: $primary
     padding: 10px 20px
@@ -55,4 +74,22 @@
     &:hover::before,
     &:hover::after
       width: 50%
+
+  &_tags
+    color: $primary
+    font-size: 12px
+    font-weight: 500
+    text-transform: uppercase
+    border: 1px solid $primary
+    padding: 13px 26px
+    transition
+      property: color, border, background-color
+      duration: .3s
+      timing-function: ease-in-out
+
+    &:hover
+      color: $light
+
+      border: 1px solid $red
+      background-color: $red
 

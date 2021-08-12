@@ -7,15 +7,19 @@ header(class="navbar")
 		ul(class="navbar_menu")
 			each val in ['звезды','монархи','мода','свадьбы','дети','красота','стиль жизни','кино','подарки','галереи']
 				li(class="navbar_menu_item")
+					ul(class="navbar_submenu")
+						each val2 in ['звезды','монархи','мода','свадьбы']
+							li(class="navbar_submenu_item")
+								a(href="#0")= val2
 					a(href="#0")= val
 
 		div(class="navbar_button_container")
-			div(class="navbar_button")
+			div(class="navbar_button find")
 				include ../../images/search.svg
 			a(class="navbar_button" href="mailto:infohello@hello.ru")
 				span(class="sr-only") Напишите нам
 				include ../../images/mail.svg
-			div(class="navbar_button")
+			div(class="navbar_button burger")
 				include ../../images/burger.svg
 
 

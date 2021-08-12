@@ -3,233 +3,150 @@ html(lang="ru")
 	include components/header.pug
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+
 		main(class="container home")
-			section(class="slider home_shapter")
-				div(class="topnews")
-					h2(class="topnews_title") TOP NEWS
-					ul(class="topnews_list")
-						li(class="topnews_item fs_14")
-							a(href="#0") Не без проблем: принц Гарри прилетел в Великобританию на 60-летие со дня рождения принцессы Дианы
-						li(class="topnews_item fs_14")
-							a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
-						li(class="topnews_item fs_14")
-							a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
+			h1(class="sr-only") HELLO! Russia - Сайт Hello! в России
+			div(class="home_first")
+				// Slider
+				section(class="slider")
+					div(class="topnews")
+						h2(class="topnews_title") TOP NEWS
+						ul(class="topnews_list")
+							li(class="topnews_item fs_14")
+								a(href="#0") Не без проблем: принц Гарри прилетел в Великобританию на 60-летие со дня рождения принцессы Дианы
+							li(class="topnews_item fs_14")
+								a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
+							li(class="topnews_item fs_14")
+								a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
+							li(class="topnews_item fs_14")
+								a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
+							li(class="topnews_item fs_14")
+								a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
 
-				article(class="slider_article active")
-					header(class="slider_article_header")
-						img(class="slider_article_image" src="./images/main/slider1.webp" alt="" width="950" height="650")
-					div(class="slider_article_badge")
-						div(class="slider_article_body")
-							span(class="slider_article_category")
-								a(href="#0") "НОВОСТИ О ЗВЕЗДАХ"
-							h2(class="slider_article_title")
-								a(href="#0") "Он должен сидеть в тюрьме!": Бритни Спирс рассказала, как на протяжении 13 лет обходился с ней отец
+					article(class="slider_article")
+						header(class="slider_article_header")
+							a(class="slider_article_link" href="#0")
+								img(class="slider_article_image" loading="lazy" src="./images/main/slider3.webp" alt="" width="" height="")
+						div(class="slider_article_badge")
+							div(class="slider_article_body")
+								span(class="slider_article_category")
+									a(class="fs_24" href="#0") "Интервью"
+								h2(class="slider_article_title")
+									a(class="fs_24" href="#0") Сергей Полунин и Елена Ильиных приняли участие в первой съемке с сыном и рассказали о скорой свадьбе
+							footer(class="slider_article_footer")
+								a(class="btn btn_primary" href="#0") Читать далее
+
+					article(class="slider_article")
+						header(class="slider_article_header")
+							a(class="slider_article_link" href="#0")
+								img(class="slider_article_image" loading="lazy" src="./images/main/slider1.webp" alt="" width="" height="")
+						div(class="slider_article_badge")
+							div(class="slider_article_body")
+								span(class="slider_article_category")
+									a(class="fs_24" href="#0") "НОВОСТИ О ЗВЕЗДАХ"
+								h2(class="slider_article_title")
+									a(class="fs_24" href="#0") "Он должен сидеть в тюрьме!": Бритни Спирс рассказала, как на протяжении 13 лет обходился с ней отец
+							footer(class="slider_article_footer")
+								a(class="btn btn_primary" href="#0") Читать далее
+
+					article(class="slider_article")
+						header(class="slider_article_header")
+							a(class="slider_article_link" href="#0")
+								img(class="slider_article_image" loading="lazy" src="./images/main/slider2.webp" alt="" width="" height="")
+						div(class="slider_article_badge")
+							div(class="slider_article_body")
+								span(class="slider_article_category")
+									a(class="fs_24" href="#0") "Красная дорожка"
+								h2(class="slider_article_title")
+									a(class="fs_24" href="#0") Марго Робби, Кейт Бекинсейл, Рита Ора и Тайка Вайтити и другие на премьере "Отряда самоубийц"
+							footer(class="slider_article_footer")
+								a(class="btn btn_primary" href="#0") Читать далее
+
+					ul(class="slider_dots")
 
 
-						footer(class="slider_article_footer")
-							a(class="btn btn_primary" href="#0") Читать далее
+				// Heroes of the day
+				section(class="heroes mb_40")
+					h2(class="heroes_title fs_18") Герои дня:
+					p(class="heroes_item fs_18")
+						a(href="#0") Джордж и Амаль Клуни
+					p(class="heroes_item fs_18")
+						a(href="#0") Сергей Полунин и Елена Ильиных
+					p(class="heroes_item fs_18")
+						a(href="#0") Билл Гейтс
+					p(class="heroes_item fs_18")
+						a(href="#0") Милош Бикович
+					p(class="heroes_item fs_18")
+						a(href="#0") Михаил Галустян
 
-				ul(class="slider_dots")
-					li(class="slider_dots_item active")
-					li(class="slider_dots_item")
-					li(class="slider_dots_item")
-					li(class="slider_dots_item")
 
-			section(class="banner home_shapter")
+
+
+			// Banner
+			section(class="banner mb_40")
 				h2(class="sr-only") Заголовок рекламного банера
 				a(class="banner_link" href="#0" target="_blank")
 					div(class="banner_picture")
-						img(class="banner_horizontal" src="./images/banners/banner_horizontal.webp" alt="" width="1450" height="350")
-						img(class="banner_vertical" src="./images/banners/banner_vertical.webp" alt="" width="300" height="600")
+						img(class="banner_horizontal" loading="lazy" src="./images/banners/banner_horizontal.webp" alt="" width="1450" height="350")
+						img(class="banner_vertical" loading="lazy" src="./images/banners/banner_tablet.webp" alt="" width="300" height="600")
 
 
-			section(class="home_shapter")
-				header(class="home_header")
-					h2(class="title fs_36 marker marker_red") Звезды
-					a(class="btn btn_primary_outline" href="#0") Перейти в раздел
-				div(class="card_row row")
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news1.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_red")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
 
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news2.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_red")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
-						p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+			// Card Custom
+			div(class="cardcustom_container mb_40")
+				article(class="cardcustom")
+					a(class="cardcustom_picture" href="#0")
+						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom1.webp" alt="" width="" height="")
+					h2(class="cardcustom_title")
+						a(href="#0") Александра Ревенко: "С самого детства чувствую себя не как все"
 
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news3.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_red")
-							a(href="#0") Красная дорожка
-						h3(class="card_title fs_18")
-							a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
-						p(class="card_description") Хроника четвертого дня фестиваля "Жара".
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+				article(class="cardcustom")
+					a(class="cardcustom_picture" href="#0")
+						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom2.webp" alt="" width="" height="")
+					h2(class="cardcustom_title")
+						a(href="#0") Пэрис Хилтон о женихе Картере Реуме, беременности и имени для дочери
 
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news4.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_red")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+				article(class="cardcustom")
+					a(class="cardcustom_picture" href="#0")
+						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom3.webp" alt="" width="" height="")
+					h2(class="cardcustom_title")
+						a(href="#0") Настасья Самбурская, Элджей, Варвара Шмыкова и другие на премьере "Отряда самоубийц"
 
-			section(class="home_shapter")
-				header(class="home_header")
-					h2(class="title fs_36 marker marker_black") Мода
-					a(class="btn btn_primary_outline" href="#0") Перейти в раздел
-				div(class="card_row row")
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news1.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_black")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+				article(class="cardcustom")
+					a(class="cardcustom_picture" href="#0")
+						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom4.webp" alt="" width="" height="")
+					h2(class="cardcustom_title")
+						a(href="#0") Лена Катина: о сыне, дружбе и конкуренции в шоу-бизнесе
 
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news2.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_black")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
-						p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news3.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_black")
-							a(href="#0") Красная дорожка
-						h3(class="card_title fs_18")
-							a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
-						p(class="card_description") Хроника четвертого дня фестиваля "Жара".
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news4.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_black")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-			section(class="home_shapter")
-				header(class="home_header")
-					h2(class="title fs_36 marker marker_blue") Красота
-					a(class="btn btn_primary_outline" href="#0") Перейти в раздел
-				div(class="card_row row")
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news1.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_blue")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news2.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_blue")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
-						p(class="card_description") Американская супермодель поделилась фото кольца в Instagram.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news3.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_blue")
-							a(href="#0") Красная дорожка
-						h3(class="card_title fs_18")
-							a(href="#0") Ксения Собчак, Пелагея, Юлианна Караулова, Тимати и другие на музыкальном вечере Григория Лепса
-						p(class="card_description") Хроника четвертого дня фестиваля "Жара".
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
-
-					article(class="card")
-						div(class="card_picture")
-							img(class="card_image" src="./images/main/news4.webp" alt="" width="340" height="200")
-						span(class="card_category fs_24 marker marker_blue")
-							a(href="#0") Звездные пары
-						h3(class="card_title fs_18")
-							a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-						p(class="card_description") Сегодня гимнастке и жене известного комика исполнилось 36 лет.
-						time(class="card_time fs_14" datetime="2021-06-28 13:25") 28 июня 2021 / 13:25
+				article(class="cardcustom")
+					a(class="cardcustom_picture" href="#0")
+						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom5.webp" alt="" width="" height="")
+					h2(class="cardcustom_title")
+						a(href="#0") Вновь холостой Билл Гейтс о дружбе с Джеффри Эпштейном и разводе: "Я должен идти дальше"
 
 
-			section(class="home_shapter")
-				header(class="home_header")
-					h2(class="title fs_36 marker marker_cyan") Галереи
-					a(class="btn btn_primary_outline" href="#0") Перейти в раздел
-				div(class="cardgallery_row row")
-					article(class="cardgallery")
-						a(class="cardgallery_link" href="#0")
-							div(class="cardgallery_picture")
-								img(class="cardgallery_image" src="./images/main/galery1.webp" alt="" width="710" height="440")
-							header(class="cardgallery_category fs_24 marker marker_cyan") Галереи
-							footer(class="cardgallery_footer")
-								h3(class="cardgallery_title fs_36") День отца – 2021
-								time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
 
-					article(class="cardgallery")
-						a(class="cardgallery_link" href="#0")
-							div(class="cardgallery_picture")
-								img(class="cardgallery_image" src="./images/main/galery2.webp" alt="" width="710" height="440")
-							header(class="cardgallery_category fs_24 marker marker_cyan") Галереи
-							footer(class="cardgallery_footer")
-								h3(class="cardgallery_title fs_36") День защиты детей – 2021
-								time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
 
-					article(class="cardgallery")
-						a(class="cardgallery_link" href="#0")
-							div(class="cardgallery_picture")
-								img(class="cardgallery_image" src="./images/main/galery3.webp" alt="" width="710" height="440")
-							header(class="cardgallery_category fs_24 marker marker_cyan") Галереи
-							footer(class="cardgallery_footer")
-								h3(class="cardgallery_title fs_36") Гости презентации онлайн-кинотеатра
-								time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
+			//news
+			div(class="row mb_70")
+				div(class="home_content row")
+					include components/cards.pug
 
-					article(class="cardgallery")
-						a(class="cardgallery_link" href="#0")
-							div(class="cardgallery_picture")
-								img(class="cardgallery_image" src="./images/main/galery4.webp" alt="" width="710" height="440")
-							header(class="cardgallery_category fs_24 marker marker_cyan") Галереи
-							footer(class="cardgallery_footer")
-								h3(class="cardgallery_title fs_36") Презентация выставки "Женщина в кресле"
-								time(class="cardgallery_time fs_14" datetime="2021-06-21 20:45") 21 июня 2021 / 20:45
-				footer(class="home_footer")
-					button(class="btn btn_link") Показать ещё...
 
-			//-SUMMER
-			section(class="home_shapter")
+				include components/sidebarBanner.pug
+
+
+			//-CARD SPECIAL
+			section(class="mb_70")
 				h2(class="title_center fs_36") К лету готова
 				div(class="cardspecial_row row")
 					article(class="cardspecial")
 						a(class="cardspecial_link" href="#0")
 							div(class="cardspecial_picture")
-								img(class="cardspecial_image" src="./images/main/summer1.webp" alt="" width="300" height="300")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.webp" alt="" width="300" height="300")
 							footer(class="cardspecial_footer")
 								h3(class="cardspecial_title") Уход за кожей и волосами
 								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
@@ -237,7 +154,7 @@ html(lang="ru")
 					article(class="cardspecial")
 						a(class="cardspecial_link" href="#0")
 							div(class="cardspecial_picture")
-								img(class="cardspecial_image" src="./images/main/summer2.webp" alt="" width="300" height="300")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.webp" alt="" width="300" height="300")
 							footer(class="cardspecial_footer")
 								h3(class="cardspecial_title") Уход за кожей и волосами
 								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
@@ -245,7 +162,7 @@ html(lang="ru")
 					article(class="cardspecial")
 						a(class="cardspecial_link" href="#0")
 							div(class="cardspecial_picture")
-								img(class="cardspecial_image" src="./images/main/summer3.webp" alt="" width="300" height="300")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.webp" alt="" width="300" height="300")
 							footer(class="cardspecial_footer")
 								h3(class="cardspecial_title") Уход за кожей и волосами
 								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
@@ -253,55 +170,173 @@ html(lang="ru")
 					article(class="cardspecial")
 						a(class="cardspecial_link" href="#0")
 							div(class="cardspecial_picture")
-								img(class="cardspecial_image" src="./images/main/summer4.webp" alt="" width="300" height="300")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.webp" alt="" width="300" height="300")
 							footer(class="cardspecial_footer")
 								h3(class="cardspecial_title") Уход за кожей и волосами
 								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
 
+			//news
+			div(class="row mb_70")
+				div(class="home_content")
+					div(class="row mb_70")
+						include components/cards.pug
 
-			//-POPULAR
-			section(class="container home_shapter")
-					h2(class="title_center fs_36") Популярное
-					div(class="row")
-						article(class="cardpopular")
-							a(class="cardpopular_link" href="#0")
-								div(class="cardpopular_picture")
-									img(class="cardpopular_image" src="./images/main/popular1.webp" alt="" width="610" height="370")
-								h3(class="cardpopular_title fs_24") Настя Ивлеева, Элджей, Мария Миногарова, Даня Милохин и другие на премьере фильма в Москве
+					// Fashion
+					section(class="fashion_container mb_70")
+						h2(class="fashion_container_title")
+							span Fashion
+						div(class="row")
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news5.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Что носить в отпуске: тенденции курортного гардероба
 
-						article(class="cardpopular")
-							a(class="cardpopular_link" href="#0")
-								div(class="cardpopular_picture")
-									img(class="cardpopular_image" src="./images/main/popular2.webp" alt="" width="610" height="370")
-								h3(class="cardpopular_title fs_24") Мама Тимати Симона Юнусова похвасталась вокальными успехами внучки Алисы
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news6.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") 12 STOREEZ проведет Sample Sale в Outlet Village Белая Дача
+
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news4.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Смелые вырезы – главный тренд красных дорожек
+
+							a(class="fashion_category" href="#0")
 
 
-			//-INSTAGRAM
-			section(class="container")
-				h2(class="title_center fs_36") Instagram звезд
-				div(class="cardinst_row row")
-					article(class="cardinst")
-						a(class="cardinst_link" href="#0")
-							div(class="cardinst_picture")
-								img(class="cardinst_image" src="./images/main/instagram1.webp" alt="" width="300" height="300")
-							h3(class="cardinst_title fs_18") @sasha_savelieva
+					div(class="row mb_70")
+						include components/cards.pug
 
-					article(class="cardinst")
-						a(class="cardinst_link" href="#0")
-							div(class="cardinst_picture")
-								img(class="cardinst_image" src="./images/main/instagram2.webp" alt="" width="300" height="300")
-							h3(class="cardinst_title fs_18") @sasha_savelieva
 
-					article(class="cardinst")
-						a(class="cardinst_link" href="#0")
-							div(class="cardinst_picture")
-								img(class="cardinst_image" src="./images/main/instagram3.webp" alt="" width="300" height="300")
-							h3(class="cardinst_title fs_18") @sasha_savelieva
+					// Beauty
+					section(id="beauty1" class="beauty_container")
+						h2(class="beauty_container_title")
+							span Beauty
+							span Beauty
+						div(class="row")
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty1.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Дорого и сексуально: Кайли Дженнер представила особенную коллекцию косметики
 
-					article(class="cardinst")
-						a(class="cardinst_link" href="#0")
-							div(class="cardinst_picture")
-								img(class="cardinst_image" src="./images/main/instagram4.webp" alt="" width="300" height="300")
-							h3(class="cardinst_title fs_18") @sasha_savelieva
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty2.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Lucky Leopard: что нужно знать о новой уходовой линии MONE Professional
+
+							a(class="beauty_category" href="#0")
+
+
+
+
+
+				include components/sidebarBanner.pug
+
+			//-CARD SPECIAL
+			section(class="mb_70")
+				h2(class="title_center fs_36") К лету готова
+				div(class="cardspecial_row row")
+					article(class="cardspecial")
+						a(class="cardspecial_link" href="#0")
+							div(class="cardspecial_picture")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.webp" alt="" width="300" height="300")
+							footer(class="cardspecial_footer")
+								h3(class="cardspecial_title") Уход за кожей и волосами
+								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
+
+					article(class="cardspecial")
+						a(class="cardspecial_link" href="#0")
+							div(class="cardspecial_picture")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.webp" alt="" width="300" height="300")
+							footer(class="cardspecial_footer")
+								h3(class="cardspecial_title") Уход за кожей и волосами
+								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
+
+					article(class="cardspecial")
+						a(class="cardspecial_link" href="#0")
+							div(class="cardspecial_picture")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.webp" alt="" width="300" height="300")
+							footer(class="cardspecial_footer")
+								h3(class="cardspecial_title") Уход за кожей и волосами
+								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
+
+					article(class="cardspecial")
+						a(class="cardspecial_link" href="#0")
+							div(class="cardspecial_picture")
+								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.webp" alt="" width="300" height="300")
+							footer(class="cardspecial_footer")
+								h3(class="cardspecial_title") Уход за кожей и волосами
+								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
+
+			//news
+			div(class="row mb_70")
+				div(class="home_content")
+					div(class="row mb_70")
+						include components/cards.pug
+
+					// Fashion
+					section(class="fashion_container mb_70")
+						h2(class="fashion_container_title")
+							span Fashion
+						div(class="row")
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news5.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Что носить в отпуске: тенденции курортного гардероба
+
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news6.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") 12 STOREEZ проведет Sample Sale в Outlet Village Белая Дача
+
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news4.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Смелые вырезы – главный тренд красных дорожек
+
+							a(class="fashion_category" href="#0")
+
+
+					div(class="row mb_70")
+						include components/cards.pug
+
+
+					// Beauty
+					section(id="beauty2" class="beauty_container")
+						h2(class="beauty_container_title")
+							span Beauty
+							span Beauty
+						div(class="row")
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty1.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Дорого и сексуально: Кайли Дженнер представила особенную коллекцию косметики
+
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty2.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Lucky Leopard: что нужно знать о новой уходовой линии MONE Professional
+
+							a(class="beauty_category" href="#0")
+
+
+
+
+
+				include components/sidebarBanner.pug
+
+
+
 
 		include components/footer.pug
+		include components/scrolltop

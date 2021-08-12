@@ -1,0 +1,49 @@
+.share
+  width: 4%
+
+  @media only screen and (max-width: 1199px)
+    width: 6%
+
+  @media only screen and (max-width: 767px)
+    width: 100%
+    margin-bottom: 20px
+
+
+  &_list
+    position: sticky
+    display: block
+    top: 120px
+    list-style: none
+
+    @media only screen and (max-width: 767px)
+      position: relative
+      display: flex
+      top: unset
+
+  &_item
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    @media only screen and (max-width: 767px)
+      width: 40px
+
+      &:not(:last-child)
+        margin-bottom: 0
+        margin-right: 10px
+
+
+
+    & > a
+      display: flex
+      transition: opacity .5s ease-out
+
+      &:hover
+        opacity: .5
+
+      & > svg
+        display: block
+        width: 100%
+        height: auto
+        fill: $primary

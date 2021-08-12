@@ -4,9 +4,12 @@
   padding-bottom: 70px
 
   &_title
+    font-family: $font-title
     font-weight: 400
     text-align: center
+    text-transform: uppercase
     margin-bottom: 50px
+
 
   &_description
     margin-bottom: 30px
@@ -28,7 +31,7 @@
 
     &_title
       font-family: $font-body
-      font-weight: 600
+      font-weight: 500
       //margin-bottom: 10px
 
     &_description
@@ -51,5 +54,58 @@
 
         &:hover
           text-decoration-color: inherit
+
+  &_row
+    width: 74%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
+
+  &_error
+    min-height: calc(67vh)
+
+    &_row
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+
+    &_title
+      max-width: 650px
+      width: 100%
+      text-align: center
+      font-size: 60px
+      margin-bottom: 50px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 40px
+
+      @media only screen and (max-width: 767px)
+        font-size: 30px
+
+      @media only screen and (max-width: 319px)
+        font-size: 20px
+
+
+    &_paragraph
+      text-transform: uppercase
+      font-weight: 500
+
+      & > p
+        margin-bottom: 14px
+
+        & > a
+          color: $red
+          text-decoration-color: transparent
+          text-decoration-style: dashed
+          transition: text-decoration-color .3s ease-out
+          margin-left: 5px
+
+          &:hover
+            text-decoration-color: inherit
 
 

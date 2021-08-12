@@ -1,0 +1,28 @@
+.heroes
+  font-family: $font-title
+  text-transform: uppercase
+  text-align: center
+  border-bottom: 2px solid $primary
+
+  &_title,
+  &_item
+    display: inline-block
+    font-weight: 500
+    margin-bottom: 10px
+    margin-left: 20px
+    margin-right: 20px
+
+  &_title
+    font-weight: 700
+    color: $red
+
+  &_item
+    & > a
+      color: inherit
+      text-decoration-color: transparent
+      transition: text-decoration-color .4s ease-out
+
+      &:hover
+        text-decoration-color: inherit
+
+

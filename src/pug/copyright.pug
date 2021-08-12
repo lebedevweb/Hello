@@ -3,8 +3,11 @@ html(lang="ru")
 	include components/header.pug
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
 		main(class="container page")
-			h1(class="page_title fs_36") Правовая информация
+			h1(class="page_title fs_24") Правовая информация
 
 			div(class="page_description")
 				p HELLO.RU - ежедневно обновляемый информационно-развлекательный интернет-ресурс о жизни российских и зарубежных знаменитостей.
@@ -26,5 +29,6 @@ html(lang="ru")
 			include components/follow.pug
 
 		include components/footer.pug
+		include components/scrolltop
 
 

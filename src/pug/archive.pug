@@ -3,8 +3,11 @@ html(lang="ru")
 	include components/header.pug
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
 		main(class="container page")
-			h1(class="page_title fs_36") Архив статей
+			h1(class="page_title fs_24") Архив статей
 			nav(class="archive_nav")
 				ul(class="archive_nav_list")
 					li(class="archive_nav_item")
@@ -130,3 +133,4 @@ html(lang="ru")
 
 
 		include components/footer.pug
+		include components/scrolltop

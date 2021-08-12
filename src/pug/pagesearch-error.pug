@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+		div(class="container row page")
+			main(class="pagesearch")
+				h1(class="title fs_36") Результаты поиска
+				form(class="pagesearch_form")
+					input(class="pagesearch_form_input" type="text" name="query" placeholder="Найти..." required)
+					button(class="btn pagesearch_form_button" type="submit")
+
+				div(id="results" class="pagesearch_error")
+					h2(class="pagesearch_error_title") По Вашему запросу ничего не найдено
+
+
+
+
+			include components/sidebar.pug
+
+
+
+		include components/footer.pug
+		include components/scrolltop

@@ -22,3 +22,10 @@ function addClass(element, value) {
   }
 }
 
+function toggleClass(element, value) {
+  if (element) {
+    element.classList.toggle(value)
+  } else {
+    return
+  }
+}

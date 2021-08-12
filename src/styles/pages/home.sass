@@ -1,6 +1,32 @@
 .home
-  padding-top: 70px
+  //padding-top: 70px
   padding-bottom: 70px
+
+  &_first
+    display: flex
+    box-sizing: border-box
+    flex-direction: column
+    justify-content: space-between
+    min-height: calc(100vh - 105px)
+    padding-top: 70px
+
+    @media only screen and (max-width: 1680px)
+      min-height: calc(100vh - 79px)
+
+    @media only screen and (max-width: 1199px)
+      min-height: auto
+
+    & > .slider
+      & > .topnews
+        width: 35%
+        padding-right: 2%
+
+        @media only screen and (max-width: 1680px)
+          width: 40%
+
+        @media only screen and (max-width: 1199px)
+          display: none
+
 
   &_header
     display: flex
@@ -14,30 +40,20 @@
   &_footer
     text-align: center
 
-  &_shapter
-    margin-bottom: 90px
 
-    @media only screen and (max-width: 1680px)
-      margin-bottom: 74px
-
-    @media only screen and (max-width: 1199px)
-      margin-bottom: 58px
-
-    @media only screen and (max-width: 767px)
-      margin-bottom: 40px
-
-  & > .slider
-    & > .topnews
-      width: 35%
-      padding-right: 2%
-
-      @media only screen and (max-width: 1680px)
-        width: 40%
-
-      @media only screen and (max-width: 1199px)
-        display: none
-
-  & .banner_vertical
+  & > .banner .banner_vertical
     display: none
 
+    @media only screen and (max-width: 767px)
+      display: block
+
+
+  //&_row
+
+
+  &_content
+    width: 74%
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
 

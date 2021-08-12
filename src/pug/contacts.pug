@@ -1,10 +1,14 @@
 doctype html
 html(lang="ru")
 	include components/header.pug
+
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
 		main(class="container page")
-			h1(class="page_title fs_36") Контакты
+			h1(class="page_title fs_24") Контакты
 			article(class="page_contacts")
 				h2(class="page_contacts_title fs_18") ШЕФ-РЕДАКТОР ЖУРНАЛА HELLO! И САЙТА HELLO.RU
 				address(class="page_contacts_description fs_18") Марина Савельева
@@ -48,3 +52,4 @@ html(lang="ru")
 			include components/follow.pug
 
 		include components/footer.pug
+		include components/scrolltop

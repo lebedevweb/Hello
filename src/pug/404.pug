@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+
+
+	body
+		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+		main(class="container page page_error")
+			div(class="page_error_row")
+				h1(class="page_error_title") Единственная страница, на которой нет звезд
+				div(class="page_error_paragraph fs_14")
+					p Возможно, вы перешли по неверной ссылке или неправильно ввели адрес.
+					p Проверьте правильность написания или поищите необходимое на
+						a(href="/") Главной странице
+					p Можно также воспользоваться
+						a(href="#0") поиском
+
+
+		include components/footer.pug
+		include components/scrolltop

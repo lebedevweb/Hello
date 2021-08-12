@@ -30,7 +30,7 @@ const styleFiles = [
 
 //Порядок подключения js файлов
 const scriptFiles = [
-  '../src/js/*.js'
+  '../src/js/**/*.js'
 ]
 
 // Таск для обработки pug
@@ -56,15 +56,15 @@ gulp.task('styles', () => {
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", notify.onError()))
     .pipe(autoprefixer({ cascade: true, grid:true }))
-    // .pipe(cleancss({
-    //   level: {
-    //     2: {
-    //       all: true,
-    //       removeUnusedAtRules: false,
-    //       restructureRules: false
-    //     }
-    //   }
-    // })) // Opt., comment out when debugging
+    .pipe(cleancss({
+      level: {
+        2: {
+          all: true,
+          removeUnusedAtRules: false,
+          restructureRules: false
+        }
+      }
+    })) // Opt., comment out when debugging
   .pipe(sourcemaps.write())
   // .pipe(rename({suffix: '.min'}))
   //Выходная папка для стилей

@@ -1,0 +1,287 @@
+.sidenav
+  box-sizing: border-box
+  position: fixed
+  top: 0
+  right: -330px
+  max-height: 100vh
+  height: 100%
+  max-width: 330px
+  width: 100%
+  background-color: rgba($primary,.9)
+  color: $light
+  transition:
+    property: opacity, transform, right
+    duration: 0.5s, 1s, .8s
+    timing-function: ease-out
+  padding: 30px 10px 20px 10px
+  overflow: hidden
+  z-index: 1050
+
+  &.active
+    right: 0
+
+  &_container
+    box-sizing: border-box
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    overflow-x: hidden
+    scrollbar-width: none
+    -ms-overflow-style: none
+
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
+
+  &_header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &_region
+    display: flex
+    align-items: center
+    cursor: pointer
+    font-size: 14px
+    font-weight: 500
+
+    & > svg
+      width: 27px
+      height: 27px
+      margin-right: 10px
+
+    &s
+      border-bottom: 2px solid $light
+      overflow: hidden
+      padding-top: 25px
+      transition: max-height .6s ease-out
+      max-height: 0
+      margin-bottom: 22px
+
+      &.active
+        max-height: 1000px
+
+
+      &_title
+        font-family: $font-title
+        color: $red
+        text-transform: uppercase
+        margin-bottom: 15px
+
+      &_list
+        font-size: 14px
+        list-style: none
+        margin-bottom: 25px
+
+      &_item
+        margin-bottom: 5px
+
+        & > a
+          color: $light
+          text-decoration-color: transparent
+          transition: color .4s ease-out
+
+          &:hover
+            color: $red
+
+          & > span
+            display: inline-block
+            min-width: 30px
+
+  &_close
+    cursor: pointer
+    font-size: 50px
+    line-height: 30px
+
+  &_menu
+    list-style: none
+    width: 90px
+    border-right: 2px solid $light
+    padding-right: 10px
+    margin-left: auto
+    margin-bottom: 30px
+
+    &_list
+      position: relative
+      display: block
+      text-align: right
+      text-transform: uppercase
+      font-size: 12px
+
+      &.active,
+      &:hover
+        & > .sidenav_submenu
+          transform: scaleY(1)
+          opacity: 1
+
+      & > a
+        display: block
+        color: $light
+        text-decoration: none
+        padding-top: 10px
+        padding-bottom: 10px
+        transition: color .4s ease-out
+
+        &:hover
+          color: $red
+
+      &:nth-last-child(n+4) > .sidenav_submenu
+        top: 0
+
+      &:nth-last-child(-n+3)  > .sidenav_submenu
+        bottom: 0
+
+
+  &_submenu
+    position: absolute
+    right: 100%
+    max-width: 105px
+    transform-origin: 100% 0
+    transform: scaleY(0)
+    opacity: 0
+    transition:
+      property: transform, opacity
+      duration: .1s, .9s
+      delay: .1s, .5s
+      timing-function: ease-out
+    padding-right: 10px
+    border-right: 1px solid $light
+
+    &_list
+      position: relative
+      display: block
+      text-align: right
+      text-transform: none
+      font-size: 12px
+      overflow-wrap: break-word
+
+      & > a
+        display: block
+        color: $light
+        text-decoration: none
+        padding-top: 10px
+        padding-bottom: 10px
+        transition: color .4s ease-out
+
+        &:hover
+          color: $red
+
+
+
+  &_live
+    border-bottom: 1px solid $light
+    padding-bottom: 20px
+    margin-bottom: 20px
+
+    & > a
+      display: block
+      width: 82px
+      height: 44px
+      margin-left: auto
+
+
+      & > img
+        display: block
+        width: 100%
+        height: 100%
+
+  &_magazine
+    text-align: right
+    margin-bottom: 20px
+
+    &_image
+      display: block
+      text-decoration: none
+      width: 150px
+      margin-left: auto
+      margin-bottom: 5px
+
+      & > img
+        display: block
+        width: 100%
+        height: auto
+
+    &_link
+      color: $light
+      font-size: 14px
+      font-weight: 300
+
+  &_subscribe
+    border-bottom: 1px solid $light
+    padding-bottom: 20px
+    margin-bottom: 20px
+
+    &_title
+      font-family: $font-body
+      font-size: 14px
+      line-height: 1.4
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 20px
+
+
+    & > form
+      display: block
+      text-align: center
+
+      & > input
+        display: block
+        width: 100%
+        padding: 5px
+
+
+  &_follow
+    margin-bottom: 30px
+
+    &_list
+      list-style: none
+      display: flex
+      justify-content: space-between
+
+    &_item
+      display: block
+      width: 12%
+
+      & > a
+        display: inherit
+        width: 100%
+        transition: opacity .4s ease-out
+
+        &:hover
+          opacity: .6
+
+        & > svg
+          fill: $light
+          width: 100%
+          height: auto
+
+
+  &_links
+    margin-bottom: 30px
+
+    &_item
+      display: block
+      list-style: none
+
+      & > a
+        display: block
+        color: lighten($date,30)
+        text-transform: uppercase
+        //line-height: 2
+        text-decoration: none
+        padding-top: 6px
+        padding-bottom: 6px
+        transition: color .4s ease-out
+
+        &:hover
+          color: $red
+
+
+  &_copy
+    color: lighten($date,30)
+    margin-bottom: 20px
+    font-size: 14px
+
+  &_partner
+    color: lighten($date,30)
+    font-size: 14px

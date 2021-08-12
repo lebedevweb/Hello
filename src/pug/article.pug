@@ -3,23 +3,302 @@ html(lang="ru")
 	include components/header.pug
 	body
 		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
 
 		div(class="container row page")
-			div(class="row")
+			div(class="page_row")
 				section(class="share")
-					h2(class="sr-only") Поделиться в сети
+					h2(class="sr-only") Кнопки поделиться в сети
 					ul(class="share_list")
 						li(class="share_item")
+							a(href="https://www.facebook.com/sharer.php?src=sp&u=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Facebook
+								include ../images/social/facebook.svg
+						li(class="share_item")
+							a(href="https://vk.com/share.php?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться Вконтакте
+								include ../images/social/vk.svg
+						li(class="share_item")
+							a(href="https://twitter.com/intent/tweet?text=ЗАГОЛОВОК_СТРАНИЦЫ&url=URL_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Twitter
+								include ../images/social/twitter.svg
+						li(class="share_item")
+							a(href="https://connect.ok.ru/offer?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Одноклассниках
+								include ../images/social/ok.svg
+
 
 				main(class="article")
-					div
-						img(class="page_image" alt="" src="" width="500" height="300")
-					h1(class="title fs_36 mb_70") Галереи
+					header(class="mb_70")
+						img(class="article_image" alt="" src="./images/article/main.webp" width="960" height="545")
+						span(class="article_category fs_24")
+							a(href="#0") Красная дорожка
+						h1(class="article_title fs_24") Глюк’oZa, Ксения Собчак, Манижа, Елка и другие на закрытии фестиваля "Жара"
+						div(class="row")
+							p(class="article_autors fs_14")
+								span ТЕКСТ:
+								span ОЛЬГА КУСИКОВА
+								span ФОТО:
+								span АРХИВЫ ПРЕСС-СЛУЖБ
+
+							time(class="article_time fs_14" datetime="2021-06-28 20:00") 28 ИЮНЯ 2021 / 20:00
+					div(class="article_body row")
+						p(class="article_paragraph fs_18 mb_70") "Жара" – все! Причем во всех смыслах: сегодня в Москву пришел долгожданный дождь, который "смыл" 30-градусную жару, а вчера вечером в столичном концертном зале Crocus City Hall прошел финальный гала-концерт одноименного музыкального фестиваля. Напомним, организаторам фестиваля в срочном порядке, практически на ходу пришлось менять формат мероприятия: первый день прошел при зрителях, а все остальные четыре дня зрителный зал, увы, был пуст за исключением самих звездных гостей, а выступления артистов транслировали онлайн на различных платформах.
+
+						figure(class="article_figure")
+							img(src="./images/article/1.webp" loading="lazy" alt="Maruv" width="960" height="500")
+							figcaption Maruv
+
+						p(class="article_paragraph fs_18 mb_70") По красной дорожке в заключительный день "Жары" прошлись Ксения Собчак, которая была в этот вечер ведущей, Даня Милохин, Наталья Чистякова-Ионова,
+							a(href="#0") Полина Гагарина,
+							a(href="#0") Елка,
+							a(href="#0") Рита Дакота,
+							| Анатолий Цой, Валя Карнавал, Александр Панайотов, Maruv, Artik & Asti, Манижа, Игорь Николаев с женой Юлией Проскуряковой, Ханна и многие другие.
+						p(class="article_paragraph fs_18 mb_70") Кстати, организаторы уже сообщили, что следующий, 6-й международный музыкальный фестиваль "Жара" пройдет в следующем году снова в Баку с 28 по 31 июля.
+
+						- let text = ["Ксения Собчак", "Даня Милохин", "Наталья Чистякова-Ионова (Глюк’oZa)", "Эмин", "Полина Гагарина", "Polina",]
+						- let comment = ["Манижа", "Александр Панайотов", "Artik & Asti", "Наталья Чистякова-Ионова (Глюк’oZa)", "Анатолий Цой", "Владимир Пресняков-младший и Григорий Лепс", "Artik & Asti и Дмитрий Маликов", "Леонид Агутин", "Maruv", "Ксения Собчак", "Ханна", "Рита Дакота", "Катя Адушкина", "Елка", "Ксения Собчак", "Валя Карнавал"]
+						- let i
+							- for(i = 0; i < text.length; i++)
+								- let n = i + 2
+								figure(class="article_figure")
+									img(src="./images/article/" + n + ".webp"  loading="lazy" alt= text[i] width="" height="")
+									figcaption= text[i]
+
+
+						p(class="article_paragraph fs_18 mb_70") Упорядоченный список:
+						ol(class="article_nlist fs_18 mb_70")
+							li(class="article_item fs_18") Ксения Собчак,
+							li(class="article_item fs_18")
+								a(href="#0") Леонид Агутин,
+							li(class="article_item fs_18") Ёлка,
+							li(class="article_item fs_18")
+								a(href="#0") Наталья Чистякова-Ионова,
+							li(class="article_item fs_18") Эмин Агаларов.
+
+						p(class="article_paragraph fs_18 mb_70") Неупорядоченный список:
+						ul(class="article_list fs_18 mb_70")
+							li(class="article_item fs_18") Ксения Собчак,
+							li(class="article_item fs_18")
+								a(href="#0") Леонид Агутин,
+							li(class="article_item fs_18") Ёлка,
+							li(class="article_item fs_18")
+								a(href="#0") Наталья Чистякова-Ионова,
+							li(class="article_item fs_18") Эмин Агаларов.
+
+						p(class="article_paragraph fs_18 mb_70") Цитата:
+
+						blockquote(class="article_blockquote mb_70")
+							p(class="fs_18") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa dolores ducimus ea eligendi harum, illo itaque labore maxime nobis nulla officia porro ratione sit soluta tempora, totam veritatis voluptatum?
+
+						figure(class="article_video mb_70")
+							div(class="article_video_container mb_70")
+								iframe(allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wPOb8sr3TKc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="auto" frameborder="0")
+
+
+
+
+					footer(class="article_footer")
+						ul(class="article_footer_tags")
+							- let tags = ["Ксения Собчак", "Леонид Агутин", "Ёлка", "Наталья Чистякова-Ионова", "Эмин Агаларов", "Дмитрий Маликов", "Полина Гагарина", "Григорий Лепс", "Рита Дакота", "Музыка"]
+								each tag in tags
+									li
+										a(class="btn btn_tags" href="#0")= tag
 
 
 
 
 
 
-			include components/sidebar.pug
+
+				section(class="readmore")
+						h2(class="title_center fs_36") Читайте также
+						div(class="row")
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/01.webp"  loading="lazy" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Одежда Dior от Трэвиса Скотта, баскетбольные мячи от Tiffany & Co: дайджест fashion-новостей недели
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/02.webp"  loading="lazy" alt="" width="250" height="283")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Блейк Лайвли испекла торт в виде арбуза в кольце за 2,5 миллиона долларов
+
+							article(class="readmore_card")
+								a(class="banner_link" href="#0" target="_blank")
+									img(class="banner_readmore" loading="lazy" src="./images/banners/banner_read_more.webp" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/03.webp"  loading="lazy" alt="" width="250" height="113")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/04.webp"  loading="lazy" alt="" width="250" height="283")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+
+							article(class="readmore_card")
+								a(class="banner_link" href="#0" target="_blank")
+									img(class="banner_readmore" src="./images/banners/banner_read_more.webp" loading="lazy" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+
+
+			include components/sidebarBanner.pug
+
+		div(class="container row page")
+			div(class="page_row")
+				section(class="share")
+					h2(class="sr-only") Кнопки поделиться в сети
+					ul(class="share_list")
+						li(class="share_item")
+							a(href="https://www.facebook.com/sharer.php?src=sp&u=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Facebook
+								include ../images/social/facebook.svg
+						li(class="share_item")
+							a(href="https://vk.com/share.php?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться Вконтакте
+								include ../images/social/vk.svg
+						li(class="share_item")
+							a(href="https://twitter.com/intent/tweet?text=ЗАГОЛОВОК_СТРАНИЦЫ&url=URL_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Twitter
+								include ../images/social/twitter.svg
+						li(class="share_item")
+							a(href="https://connect.ok.ru/offer?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Одноклассниках
+								include ../images/social/ok.svg
+
+
+				main(id="article" class="article")
+					header(class="mb_70")
+						img(class="article_image" alt="" src="./images/article/main.webp" width="960" height="545")
+						span(class="article_category fs_24")
+							a(href="#0") Красная дорожка
+						h1(class="article_title fs_24") Глюк’oZa, Ксения Собчак, Манижа, Елка и другие на закрытии фестиваля "Жара"
+						div(class="row")
+							p(class="article_autors fs_14")
+								span ТЕКСТ:
+								span ОЛЬГА КУСИКОВА
+								span ФОТО:
+								span АРХИВЫ ПРЕСС-СЛУЖБ
+
+							time(class="article_time fs_14" datetime="2021-06-28 20:00") 28 ИЮНЯ 2021 / 20:00
+					div(class="article_body row")
+						p(class="article_paragraph fs_18 mb_70") "Жара" – все! Причем во всех смыслах: сегодня в Москву пришел долгожданный дождь, который "смыл" 30-градусную жару, а вчера вечером в столичном концертном зале Crocus City Hall прошел финальный гала-концерт одноименного музыкального фестиваля. Напомним, организаторам фестиваля в срочном порядке, практически на ходу пришлось менять формат мероприятия: первый день прошел при зрителях, а все остальные четыре дня зрителный зал, увы, был пуст за исключением самих звездных гостей, а выступления артистов транслировали онлайн на различных платформах.
+
+						figure(class="article_figure")
+							img(src="./images/article/1.webp" loading="lazy" alt="Maruv" width="960" height="500")
+							figcaption Maruv
+
+						p(class="article_paragraph fs_18 mb_70") По красной дорожке в заключительный день "Жары" прошлись Ксения Собчак, которая была в этот вечер ведущей, Даня Милохин, Наталья Чистякова-Ионова,
+							a(href="#0") Полина Гагарина,
+							a(href="#0") Елка,
+							a(href="#0") Рита Дакота,
+							| Анатолий Цой, Валя Карнавал, Александр Панайотов, Maruv, Artik & Asti, Манижа, Игорь Николаев с женой Юлией Проскуряковой, Ханна и многие другие.
+						p(class="article_paragraph fs_18 mb_70") Кстати, организаторы уже сообщили, что следующий, 6-й международный музыкальный фестиваль "Жара" пройдет в следующем году снова в Баку с 28 по 31 июля.
+						- let j
+							- for(j = 0; j < text.length; j++)
+								- let n = j + 2
+								figure(class="article_figure")
+									img(src="./images/article/" + n + ".webp"  loading="lazy" alt= text[j] width="" height="")
+									figcaption= text[j]
+
+
+						p(class="article_paragraph fs_18 mb_70") Упорядоченный список:
+						ol(class="article_nlist fs_18 mb_70")
+							li(class="article_item fs_18") Ксения Собчак,
+							li(class="article_item fs_18")
+								a(href="#0") Леонид Агутин,
+							li(class="article_item fs_18") Ёлка,
+							li(class="article_item fs_18")
+								a(href="#0") Наталья Чистякова-Ионова,
+							li(class="article_item fs_18") Эмин Агаларов.
+
+						p(class="article_paragraph fs_18 mb_70") Неупорядоченный список:
+						ul(class="article_list fs_18 mb_70")
+							li(class="article_item fs_18") Ксения Собчак,
+							li(class="article_item fs_18")
+								a(href="#0") Леонид Агутин,
+							li(class="article_item fs_18") Ёлка,
+							li(class="article_item fs_18")
+								a(href="#0") Наталья Чистякова-Ионова,
+							li(class="article_item fs_18") Эмин Агаларов.
+
+						p(class="article_paragraph fs_18 mb_70") Цитата:
+
+						blockquote(class="article_blockquote mb_70")
+							p(class="fs_18") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa dolores ducimus ea eligendi harum, illo itaque labore maxime nobis nulla officia porro ratione sit soluta tempora, totam veritatis voluptatum?
+
+						figure(class="article_video mb_70")
+							div(class="article_video_container mb_70")
+								iframe(allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wPOb8sr3TKc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="auto" frameborder="0")
+
+
+
+
+					footer(class="article_footer")
+						ul(class="article_footer_tags")
+							- let tags2 = ["Ксения Собчак", "Леонид Агутин", "Ёлка", "Наталья Чистякова-Ионова", "Эмин Агаларов", "Дмитрий Маликов", "Полина Гагарина", "Григорий Лепс", "Рита Дакота", "Музыка"]
+							each tag in tags2
+								li
+									a(class="btn btn_tags" href="#0")= tag
+
+
+
+
+
+
+
+				section(class="readmore")
+					h2(class="title_center fs_36") Читайте также
+					div(class="row")
+						article(class="readmore_card")
+							div(class="readmore_card_image")
+								img(src="./images/readmore/01.webp"  loading="lazy" alt="" width="250" height="200")
+							h3(class="readmore_card_title fs_14")
+								a(href="#0") Одежда Dior от Трэвиса Скотта, баскетбольные мячи от Tiffany & Co: дайджест fashion-новостей недели
+
+						article(class="readmore_card")
+							div(class="readmore_card_image")
+								img(src="./images/readmore/02.webp"  loading="lazy" alt="" width="250" height="283")
+							h3(class="readmore_card_title fs_14")
+								a(href="#0") Блейк Лайвли испекла торт в виде арбуза в кольце за 2,5 миллиона долларов
+
+						article(class="readmore_card")
+							a(class="banner_link" href="#0" target="_blank")
+								img(class="banner_readmore" loading="lazy" src="./images/banners/banner_read_more.webp" alt="" width="250" height="200")
+							h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+						article(class="readmore_card")
+							div(class="readmore_card_image")
+								img(src="./images/readmore/03.webp"  loading="lazy" alt="" width="250" height="113")
+							h3(class="readmore_card_title fs_14")
+								a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+
+						article(class="readmore_card")
+							div(class="readmore_card_image")
+								img(src="./images/readmore/04.webp"  loading="lazy" alt="" width="250" height="283")
+							h3(class="readmore_card_title fs_14")
+								a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+
+						article(class="readmore_card")
+							a(class="banner_link" href="#0" target="_blank")
+								img(class="banner_readmore" src="./images/banners/banner_read_more.webp" loading="lazy" alt="" width="250" height="200")
+							h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+
+
+			include components/sidebarBanner.pug
+
+
+
+
 		include components/footer.pug
+		include components/scrolltop

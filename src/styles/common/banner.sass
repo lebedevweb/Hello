@@ -1,20 +1,46 @@
 .banner
-  margin-left: auto
-  margin-right: auto
+  width: 100%
 
   &_link,
+  &_small_link,
   &_picture,
   &_image
     display: block
-    width: 100%
 
   &_horizontal
+    display: block
+    width: 100%
+    height: auto
+
     @media only screen and (max-width: 767px)
       display: none
 
+  &_small
+    display: block
+    width: 100%
+    height: auto
+
+    &_link
+      margin-top: 30px
+
+      @media only screen and (max-width: 1680px)
+        margin-top: 10px
+
   &_vertical
+    display: block
+    width: 100%
+    max-width: 300px
+    height: auto
+
     @media only screen and (max-width: 767px)
-      display: block
-      max-width: 300px
       margin-left: auto
       margin-right: auto
+
+  &_readmore
+    display: block
+    width: 100%
+    height: auto
+
+  &_link
+    margin-left: auto
+    margin-right: auto

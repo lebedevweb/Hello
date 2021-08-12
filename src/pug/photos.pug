@@ -1,0 +1,95 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+		div(class="container row page")
+			div(class="page_row")
+				section(class="share")
+					h2(class="sr-only") Кнопки поделиться в сети
+					ul(class="share_list")
+						li(class="share_item")
+							a(href="https://www.facebook.com/sharer.php?src=sp&u=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Facebook
+								include ../images/social/facebook.svg
+						li(class="share_item")
+							a(href="https://vk.com/share.php?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться Вконтакте
+								include ../images/social/vk.svg
+						li(class="share_item")
+							a(href="https://twitter.com/intent/tweet?text=ЗАГОЛОВОК_СТРАНИЦЫ&url=URL_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Twitter
+								include ../images/social/twitter.svg
+						li(class="share_item")
+							a(href="https://connect.ok.ru/offer?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
+								span(class="sr-only") Поделиться в Одноклассниках
+								include ../images/social/ok.svg
+
+
+				main(class="article")
+					h1(class="title_center fs_36 mb_70") Принцу Филиппу – 100 лет: 30 фотографий мужа королевы Елизаветы II в кругу семьи
+					div(class="photoslider mb_70")
+						header(class="photoslider_header")
+							div(class="photoslider_back")
+								include ../images/photos/left.svg
+							ul(class="photoslider_list")
+								- for (let i = 0; i < 4; i++)
+									li(class="photoslider_item")
+										img(src=`./images/photos/0${i+1}.webp` loading="lazy" alt=`Елизавета и Филипп, 1947 год ${i+1}` width="" height="")
+							div(class="photoslider_next")
+								include ../images/photos/right.svg
+
+						div(class="photoslider_counter fs_18")
+							span(class="photoslider_current")
+							span /
+							span(class="photoslider_total")
+						footer(class="photoslider_footer fs_18")
+
+
+					section(class="readmore")
+						h2(class="title_center fs_36") Читайте также
+						div(class="row")
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/01.webp"  loading="lazy" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Одежда Dior от Трэвиса Скотта, баскетбольные мячи от Tiffany & Co: дайджест fashion-новостей недели
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/02.webp"  loading="lazy" alt="" width="250" height="283")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Блейк Лайвли испекла торт в виде арбуза в кольце за 2,5 миллиона долларов
+
+							article(class="readmore_card")
+								a(class="banner_link" href="#0" target="_blank")
+									img(class="banner_readmore" loading="lazy" src="./images/banners/banner_read_more.webp" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/03.webp"  loading="lazy" alt="" width="250" height="113")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
+
+							article(class="readmore_card")
+								div(class="readmore_card_image")
+									img(src="./images/readmore/04.webp"  loading="lazy" alt="" width="250" height="283")
+								h3(class="readmore_card_title fs_14")
+									a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
+
+							article(class="readmore_card")
+								a(class="banner_link" href="#0" target="_blank")
+									img(class="banner_readmore" src="./images/banners/banner_read_more.webp" loading="lazy" alt="" width="250" height="200")
+								h3(class="readmore_card_title fs_14") Возможное место для рекламы
+
+
+
+
+
+			include components/sidebar.pug
+		include components/footer.pug
+		include components/scrolltop

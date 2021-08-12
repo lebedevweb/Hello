@@ -1,0 +1,117 @@
+div(class="sidenav")
+	div(class="sidenav_container")
+		header(class="sidenav_header")
+			div(class="sidenav_region")
+				include ../../images/region.svg
+				| RU
+			div(class="sidenav_close") &#215;
+		div(class="sidenav_regions")
+			h2(class="sidenav_regions_title fs_18") Hola.com
+			ul(class="sidenav_regions_list")
+				li(class="sidenav_regions_item")
+					a(href="http://www.hola.com/" target="_blank")
+						span ES
+						| Spain
+				li(class="sidenav_regions_item")
+					a(href="http://mx.hola.com/loc/?site=mx" target="_blank")
+						span MX
+						| Mexico
+				li(class="sidenav_regions_item")
+					a(href="http://us.hola.com/loc/?site=us" target="_blank")
+						span US
+						| US
+				li(class="sidenav_regions_item")
+					a(href="http://www.hola.com.ar/" target="_blank")
+						span AR
+						| Argentina
+
+			h2(class="sidenav_regions_title fs_18") Hello!
+			ul(class="sidenav_regions_list fs_14")
+				li(class="sidenav_regions_item")
+					a(href="http://www.hellomagazine.com/" target="_blank")
+						span UK
+						| United Kingdom
+				li(class="sidenav_regions_item")
+					a(href="http://us.hellomagazine.com/" target="_blank")
+						span US
+						| United States
+				li(class="sidenav_regions_item")
+					a(href="http://ca.hellomagazine.com/" target="_blank")
+						span CA
+						| Canada
+				li(class="sidenav_regions_item")
+					a(href="http://ru.hellomagazine.com/" target="_blank")
+						span RU
+						| Russia
+
+			h2(class="sidenav_regions_title fs_18") Hello! TV
+			ul(class="sidenav_regions_list fs_14")
+				li(class="sidenav_regions_item")
+					a(href="http://uk.hellotv.com/" target="_blank")
+						span UK
+						| United Kingdom
+				li(class="sidenav_regions_item")
+					a(href="http://www.hellotv.com/" target="_blank")
+						span US
+						| US
+		ul(class="sidenav_menu")
+			each menu in ['Звезды', 'Монархи', 'Мода', 'Свадьба', 'Дети', 'Красота', 'Стиль жизни', 'Кино', 'Подарки', 'Галереи']
+				li(class="sidenav_menu_list")
+					a(class="sidenav_menu_link" href="https://ya.ru/" )= menu
+					ul(class="sidenav_submenu")
+						each submenu in ['Реальное похудение', 'Дети знаменитостей', 'Благотворительность', 'Нереальное похудение']
+							li(class="sidenav_submenu_list")
+								a(href="https://ya.ru/")= submenu
+		div(class="sidenav_live")
+			a(href="0")
+				img(src="./images/Live.webp" loading="lazy")
+
+		section(class="sidenav_magazine")
+			h2(class="sr-only") Архив номеров
+			a(class="sidenav_magazine_image" href="#0")
+				img(src="./images/magazine.webp" loading="lazy" width="" height="")
+			a(class="sidenav_magazine_link" href="#0") Архив номеров
+
+		section(class="sidenav_subscribe")
+			h2(class="sidenav_subscribe_title") Подпишитесь на новости от HELLO.RU
+			form
+				input(class="sidenav_subscribe" type="email" value="" placeholder="E-mail"  required)
+				button(class="btn btn_light_outline" type="submit") Подписаться
+
+		section(class="sidenav_follow")
+			h2(class="sr-only") Подписывайтесь на нас
+			ul(class="sidenav_follow_list")
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/facebook.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/vk.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/twitter.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/ok.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/instagram.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/telegram.svg
+				li(class="sidenav_follow_item")
+					a(href="#0")
+						include ../../images/social/youtube.svg
+
+		ul(class="sidenav_links")
+			each links in ['Контакты','Реклама','Медиа-кит','Правовая информация','Условия конкурса “Самые стильные России”','Архив статей']
+				li(class="sidenav_links_item")
+					a(href="#0")= links
+
+		div(class="sidenav_copy")
+			p © Общество с ограниченной ответственностью "Медиа Технология", 2021.
+			p Все права защищены.
+			p Использование материалов сайта HELLO.RU разрешается только с письменного согласия редакции и при наличии гиперссылки на hello.ru
+
+		a(class="sidenav_partner" href="#0") Партнер Рамблера
+

@@ -79,7 +79,7 @@
       left: 0
       width: 100%
       height: 100%
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 120%)
+      background: linear-gradient(0deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .1) 120%)
       z-index: 1
 
   &_image
@@ -104,16 +104,22 @@
 
   &_title
     text-decoration: underline
-    font: 500 14px $font-body
+    font: 500 16px $font-body
+    line-height: 1.5
     text-transform: uppercase
     margin-bottom: 5px
 
     @media only screen and (max-width: 1199px)
       font-size: 12px
 
-  &_description
-    font-size: 14px
+    @media only screen and (max-width: 768px)
+      font-size: 10px
 
-    @media only screen and (max-width: 1199px)
-      font-size: 12px
+
+
+  //&_description
+  //  font-size: 14px
+  //
+  //  @media only screen and (max-width: 1199px)
+  //    font-size: 12px
 

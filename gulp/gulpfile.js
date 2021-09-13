@@ -81,7 +81,7 @@ gulp.task('scripts', () => {
 
     }))
     .pipe(concat('scripts.min.js'))
-    .pipe(uglify()) // Mifify js (opt.)
+    // .pipe(uglify()) // Mifify js (opt.)
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('../build/js'))
     .pipe(browserSync.stream());

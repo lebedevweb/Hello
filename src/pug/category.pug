@@ -14,8 +14,8 @@ html(lang="ru")
 					span(class="category_nav_item")
 						a(href="#0")= val
 
-			div(class="category_row row")
-				div(class="cardnews_row row mb_70")
+			div(class="category_row row mb_70")
+				div(class="cardnews_row row")
 					article(class="cardnews row")
 						a(class="cardnews_picture" href="#0")
 							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/01.jpg" width="550" height="300")
@@ -25,10 +25,83 @@ html(lang="ru")
 							h2(class="cardnews_title fs_18")
 								a(href="#0") Зендая, Lil Nas X, Сиара, Карди Би и другие на премии BET Awards 2021
 							footer(class="cardnews_footer row")
-
 								time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
 
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/02.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Звездные пары
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Ромео Бекхэм и его девушка Миа Реган впервые вместе вышли в свет
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 18:45
 
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/03.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Красная дорожка
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Наоми Кэмпбелл впервые вышла в свет после рождения дочери
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 17:26") 28 июня 2021 / 17:26
+
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/04.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Звездные пары
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Евротур: Джастин и Хейли Бибер улетели отдыхать в Грецию
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
+
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/03.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Красная дорожка
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Наоми Кэмпбелл впервые вышла в свет после рождения дочери
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 17:26") 28 июня 2021 / 17:26
+
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/04.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Звездные пары
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Евротур: Джастин и Хейли Бибер улетели отдыхать в Грецию
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
+
+				include components/sidebarTop.pug
+
+			//-CARD SPECIAL
+			include components/card_special
+
+
+
+
+			div(class="category_row row mb_70")
+				div(class="cardnews_row row")
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/01.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Красная дорожка
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Зендая, Lil Nas X, Сиара, Карди Би и другие на премии BET Awards 2021
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
 
 					article(class="cardnews row")
 						a(class="cardnews_picture" href="#0")
@@ -63,78 +136,6 @@ html(lang="ru")
 								a(href="#0") Евротур: Джастин и Хейли Бибер улетели отдыхать в Грецию
 							footer(class="cardnews_footer row")
 								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
-
-
-
-				include components/sidebarTop.pug
-
-			section
-				h2(class="title_center fs_36") К лету готова
-				div(class="cardspecial_row row mb_70")
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
-
-
-
-
-
-
-			div(class="category_row row")
-				div(class="cardnews_row row mb_70")
-					article(class="cardnews row")
-						a(class="cardnews_picture" href="#0")
-							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/01.jpg" width="550" height="300")
-						div(class="cardnews_content")
-							p(class="cardnews_category fs_18")
-								a(href="#0") Красная дорожка
-							h2(class="cardnews_title fs_18")
-								a(href="#0") Зендая, Lil Nas X, Сиара, Карди Би и другие на премии BET Awards 2021
-							footer(class="cardnews_footer row")
-
-								time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
-
-
-
-					article(class="cardnews row")
-						a(class="cardnews_picture" href="#0")
-							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/02.jpg" width="550" height="300")
-						div(class="cardnews_content")
-							p(class="cardnews_category fs_18")
-								a(href="#0") Звездные пары
-							h2(class="cardnews_title fs_18")
-								a(href="#0") Ромео Бекхэм и его девушка Миа Реган впервые вместе вышли в свет
-							footer(class="cardnews_footer row")
-								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 18:45
-
 
 					article(class="cardnews row")
 						a(class="cardnews_picture" href="#0")
@@ -163,52 +164,11 @@ html(lang="ru")
 				include components/sidebarBanner.pug
 
 
+			// Banner tablet
+			include components/banner_tablet
 
-
-
-
-
-
-			section
-				h2(class="title_center fs_36") К лету готова
-				div(class="cardspecial_row row mb_70")
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.jpg" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
-
-
-
-
-			div(class="category_row row")
-				div(class="cardnews_row row mb_70")
+			div(class="category_row row mb_70")
+				div(class="cardnews_row row")
 					article(class="cardnews row")
 						a(class="cardnews_picture" href="#0")
 							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/01.jpg" width="550" height="300")
@@ -218,9 +178,7 @@ html(lang="ru")
 							h2(class="cardnews_title fs_18")
 								a(href="#0") Зендая, Lil Nas X, Сиара, Карди Би и другие на премии BET Awards 2021
 							footer(class="cardnews_footer row")
-
 								time(class="cardnews_time" datetime="2021-06-28 20:00") 28 июня 2021 / 20:00
-
 
 
 					article(class="cardnews row")
@@ -257,9 +215,33 @@ html(lang="ru")
 							footer(class="cardnews_footer row")
 								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
 
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/03.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Красная дорожка
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Наоми Кэмпбелл впервые вышла в свет после рождения дочери
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 17:26") 28 июня 2021 / 17:26
+
+					article(class="cardnews row")
+						a(class="cardnews_picture" href="#0")
+							img(class="cardnews_image" loading="lazy" alt="" src="./images/category/04.jpg" width="550" height="300")
+						div(class="cardnews_content")
+							p(class="cardnews_category fs_18")
+								a(href="#0") Звездные пары
+							h2(class="cardnews_title fs_18")
+								a(href="#0") Евротур: Джастин и Хейли Бибер улетели отдыхать в Грецию
+							footer(class="cardnews_footer row")
+								time(class="cardnews_time" datetime="2021-06-28 18:45") 28 июня 2021 / 15:50
 
 
-				include components/sidebarTop.pug
+
+
+
+				include components/sidebarTop
 
 
 
@@ -269,5 +251,4 @@ html(lang="ru")
 
 
 
-		include components/footer.pug
-		include components/scrolltop
+		include components/footer

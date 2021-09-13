@@ -22,10 +22,10 @@
     position: relative
     background-color: rgba($red,.5)
     //padding: 35px 50px
-    padding: 3.3% 4.7%
+    padding: 3.3% 4.7% 75px
 
     @media only screen and (max-width: 579px)
-      padding: 35px 4.7%
+      padding: 35px 4.7% 75px
 
       & > .row
         justify-content: center
@@ -84,16 +84,17 @@
 
       @media only screen and (max-width: 920px)
         position: relative
-        width: 156px
-        left: calc(50% - 78px)
+        width: 170px
+        left: calc(50% - 85px)
         font-size: 36px
         transform: rotate(0turn)
-        margin-bottom: 23px
+        border-bottom: 1px solid $light
+        margin-bottom: 30px
 
       @media only screen and (max-width: 767px)
-        width: 116px
+        width: 120px
         font-size: 26px
-        left: calc(50% - 58px)
+        left: calc(50% - 60px)
 
 
 
@@ -113,19 +114,23 @@
         background-color: $light
 
         @media only screen and (max-width: 920px)
-          width: 156px
+          display: none
+          //width: 170px
 
-        @media only screen and (max-width: 767px)
-          width: 116px
-
-        @media only screen and (max-width: 579px)
-          width: 104px
+        //@media only screen and (max-width: 767px)
+        //  width: 120px
+        //
+        //@media only screen and (max-width: 579px)
+        //  width: 104px
 
       & > span
         display: block
 
         &:last-child
           transform: rotate(.5turn)
+
+          @media only screen and (max-width: 920px)
+            display: none
 
   &_link
     position: relative

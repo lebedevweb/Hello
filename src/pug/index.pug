@@ -11,61 +11,7 @@ html(lang="ru")
 			h1(class="sr-only") HELLO! Russia - Сайт Hello! в России
 			div(class="home_first")
 				// Slider
-				section(class="slider")
-					div(class="topnews")
-						h2(class="topnews_title") TOP NEWS
-						ul(class="topnews_list")
-							li(class="topnews_item fs_14")
-								a(href="#0") Не без проблем: принц Гарри прилетел в Великобританию на 60-летие со дня рождения принцессы Дианы
-							li(class="topnews_item fs_14")
-								a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
-							li(class="topnews_item fs_14")
-								a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
-							li(class="topnews_item fs_14")
-								a(href="#0") Без кольца и Тимати: Екатерина Сафарова улетела в Испанию и рассказала о жизни после "Холостяка"
-							li(class="topnews_item fs_14")
-								a(href="#0") Звезда сериала "Друзья" Кортни Кокс и Эд Ширан стали родственниками
-
-					article(class="slider_article")
-						header(class="slider_article_header")
-							a(class="slider_article_link" href="#0")
-								img(class="slider_article_image" loading="lazy" src="./images/main/slider3.webp" alt="" width="" height="")
-						div(class="slider_article_badge")
-							div(class="slider_article_body")
-								span(class="slider_article_category")
-									a(class="fs_24" href="#0") "Интервью"
-								h2(class="slider_article_title")
-									a(class="fs_24" href="#0") Сергей Полунин и Елена Ильиных приняли участие в первой съемке с сыном и рассказали о скорой свадьбе
-							footer(class="slider_article_footer")
-								a(class="btn btn_primary" href="#0") Читать далее
-
-					article(class="slider_article")
-						header(class="slider_article_header")
-							a(class="slider_article_link" href="#0")
-								img(class="slider_article_image" loading="lazy" src="./images/main/slider1.webp" alt="" width="" height="")
-						div(class="slider_article_badge")
-							div(class="slider_article_body")
-								span(class="slider_article_category")
-									a(class="fs_24" href="#0") "НОВОСТИ О ЗВЕЗДАХ"
-								h2(class="slider_article_title")
-									a(class="fs_24" href="#0") "Он должен сидеть в тюрьме!": Бритни Спирс рассказала, как на протяжении 13 лет обходился с ней отец
-							footer(class="slider_article_footer")
-								a(class="btn btn_primary" href="#0") Читать далее
-
-					article(class="slider_article")
-						header(class="slider_article_header")
-							a(class="slider_article_link" href="#0")
-								img(class="slider_article_image" loading="lazy" src="./images/main/slider2.webp" alt="" width="" height="")
-						div(class="slider_article_badge")
-							div(class="slider_article_body")
-								span(class="slider_article_category")
-									a(class="fs_24" href="#0") "Красная дорожка"
-								h2(class="slider_article_title")
-									a(class="fs_24" href="#0") Марго Робби, Кейт Бекинсейл, Рита Ора и Тайка Вайтити и другие на премьере "Отряда самоубийц"
-							footer(class="slider_article_footer")
-								a(class="btn btn_primary" href="#0") Читать далее
-
-					ul(class="slider_dots")
+				include components/slider
 
 
 				// Heroes of the day
@@ -84,14 +30,11 @@ html(lang="ru")
 
 
 
-
 			// Banner
 			section(class="banner mb_40")
 				h2(class="sr-only") Заголовок рекламного банера
-				a(class="banner_link" href="#0" target="_blank")
-					div(class="banner_picture")
-						img(class="banner_horizontal" loading="lazy" src="./images/banners/banner_horizontal.webp" alt="" width="1450" height="350")
-						img(class="banner_vertical" loading="lazy" src="./images/banners/banner_tablet.webp" alt="" width="300" height="600")
+				div(class="banner_horizontal")
+					img(loading="lazy" src="./images/banners/banner_horizontal.webp" alt="" width="1450" height="250")
 
 
 
@@ -136,44 +79,11 @@ html(lang="ru")
 					include components/cards.pug
 
 
-				include components/sidebarBanner.pug
+				include components/sidebarBanner
 
 
-			//-CARD SPECIAL
-			section(class="mb_70")
-				h2(class="title_center fs_36") К лету готова
-				div(class="cardspecial_row row")
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
+			//CARD SPECIAL
+			include components/card_special
 
 			//news
 			div(class="row mb_70")
@@ -212,7 +122,7 @@ html(lang="ru")
 
 
 					// Beauty
-					section(id="beauty1" class="beauty_container")
+					section(class="beauty_container")
 						h2(class="beauty_container_title")
 							span Beauty
 							span Beauty
@@ -310,7 +220,7 @@ html(lang="ru")
 
 
 					// Beauty
-					section(id="beauty2" class="beauty_container")
+					section(class="beauty_container")
 						h2(class="beauty_container_title")
 							span Beauty
 							span Beauty

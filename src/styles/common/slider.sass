@@ -78,13 +78,14 @@
 
       @media only screen and (max-width: 1199px)
         border-left: none
+        padding: 30px 10px
 
-      @media only screen and (max-width: 767px)
-        padding: 10px 0
+      //@media only screen and (max-width: 767px)
+      //  padding: 10px 0
 
     &_category
       display: block
-      font: 400 30px $font-title
+      font: 400 16px $font-title
       text-transform: uppercase
       margin-bottom: 24px
 
@@ -95,8 +96,8 @@
       text-align: left
 
       @media only screen and (max-width: 1199px)
-        text-align: center
-
+        display: none
+      //text-align: center
 
     &_title
       font-family: $font-title
@@ -122,19 +123,29 @@
 
     @media only screen and (max-width: 1199px)
       width: 100%
+      top: 74%
+
+    @media only screen and (max-width: 999px)
       top: 70%
 
-    @media only screen and (max-width: 983px)
-      top: 67%
+    @media only screen and (max-width: 799px)
+      top: 65%
 
-    @media only screen and (max-width: 787px)
-      top: 60%
+    @media only screen and (max-width: 699px)
+      top: 62%
 
-    @media only screen and (max-width: 551px)
-      top: 42%
+    @media only screen and (max-width: 599px)
+      top: 57%
 
-    @media only screen and (max-width: 335px)
-      top: 33%
+    @media only screen and (max-width: 499px)
+      top: 47%
+
+    @media only screen and (max-width: 399px)
+      top: 39%
+
+    @media only screen and (max-width: 299px)
+      top: 30%
+
 
     &_item
       cursor: pointer

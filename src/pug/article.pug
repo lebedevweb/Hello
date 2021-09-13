@@ -27,14 +27,19 @@ html(lang="ru")
 							a(href="https://connect.ok.ru/offer?url=URL_СТРАНИЦЫ&title=ЗАГОЛОВОК_СТРАНИЦЫ&utm_source" target="_blank")
 								span(class="sr-only") Поделиться в Одноклассниках
 								include ../images/social/ok.svg
+						li(class="share_item")
+							a(href="https://www.instagram.com/hello__ru/" target="_blank")
+								span(class="sr-only") Instagram
+								include ../images/social/instagram.svg
 
 
 				main(class="article")
 					header(class="mb_70")
 						img(class="article_image" alt="" src="./images/article/main.webp" width="960" height="545")
-						span(class="article_category fs_24")
+						span(class="article_category fs_18")
 							a(href="#0") Красная дорожка
 						h1(class="article_title fs_24") Глюк’oZa, Ксения Собчак, Манижа, Елка и другие на закрытии фестиваля "Жара"
+						p(class="article_description fs_18") Музыкальный фестиваль завершился красочным шоу в воскресенье вечером.
 						div(class="row")
 							p(class="article_autors fs_14")
 								span ТЕКСТ:
@@ -87,6 +92,24 @@ html(lang="ru")
 								a(href="#0") Наталья Чистякова-Ионова,
 							li(class="article_item fs_18") Эмин Агаларов.
 
+						p(class="article_paragraph fs_18 mb_70") Слайдер1:
+
+						p
+							span(class="slider_gallery_block")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_11.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
+
+						p(class="article_paragraph fs_18 mb_70") Слайдер2:
+
+						p
+							span(class="slider_gallery_block")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_11.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
+
 						p(class="article_paragraph fs_18 mb_70") Цитата:
 
 						blockquote(class="article_blockquote mb_70")
@@ -94,7 +117,7 @@ html(lang="ru")
 
 						figure(class="article_video mb_70")
 							div(class="article_video_container mb_70")
-								iframe(allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wPOb8sr3TKc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="auto" frameborder="0")
+								embiend(allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wPOb8sr3TKc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="auto" frameborder="0")
 
 
 
@@ -111,44 +134,8 @@ html(lang="ru")
 
 
 
-
-				section(class="readmore")
-						h2(class="title_center fs_36") Читайте также
-						div(class="row")
-							article(class="readmore_card")
-								div(class="readmore_card_image")
-									img(src="./images/readmore/01.webp"  loading="lazy" alt="" width="250" height="200")
-								h3(class="readmore_card_title fs_14")
-									a(href="#0") Одежда Dior от Трэвиса Скотта, баскетбольные мячи от Tiffany & Co: дайджест fashion-новостей недели
-
-							article(class="readmore_card")
-								div(class="readmore_card_image")
-									img(src="./images/readmore/02.webp"  loading="lazy" alt="" width="250" height="283")
-								h3(class="readmore_card_title fs_14")
-									a(href="#0") Блейк Лайвли испекла торт в виде арбуза в кольце за 2,5 миллиона долларов
-
-							article(class="readmore_card")
-								a(class="banner_link" href="#0" target="_blank")
-									img(class="banner_readmore" loading="lazy" src="./images/banners/banner_read_more.webp" alt="" width="250" height="200")
-								h3(class="readmore_card_title fs_14") Возможное место для рекламы
-
-							article(class="readmore_card")
-								div(class="readmore_card_image")
-									img(src="./images/readmore/03.webp"  loading="lazy" alt="" width="250" height="113")
-								h3(class="readmore_card_title fs_14")
-									a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-
-							article(class="readmore_card")
-								div(class="readmore_card_image")
-									img(src="./images/readmore/04.webp"  loading="lazy" alt="" width="250" height="283")
-								h3(class="readmore_card_title fs_14")
-									a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
-
-							article(class="readmore_card")
-								a(class="banner_link" href="#0" target="_blank")
-									img(class="banner_readmore" src="./images/banners/banner_read_more.webp" loading="lazy" alt="" width="250" height="200")
-								h3(class="readmore_card_title fs_14") Возможное место для рекламы
-
+				// READ MORE
+				include components/readmore
 
 
 			include components/sidebarBanner.pug
@@ -179,7 +166,7 @@ html(lang="ru")
 				main(id="article" class="article")
 					header(class="mb_70")
 						img(class="article_image" alt="" src="./images/article/main.webp" width="960" height="545")
-						span(class="article_category fs_24")
+						span(class="article_category fs_18")
 							a(href="#0") Красная дорожка
 						h1(class="article_title fs_24") Глюк’oZa, Ксения Собчак, Манижа, Елка и другие на закрытии фестиваля "Жара"
 						div(class="row")
@@ -235,6 +222,8 @@ html(lang="ru")
 
 						blockquote(class="article_blockquote mb_70")
 							p(class="fs_18") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa dolores ducimus ea eligendi harum, illo itaque labore maxime nobis nulla officia porro ratione sit soluta tempora, totam veritatis voluptatum?
+							p(class="fs_18") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa dolores ducimus ea eligendi harum, illo itaque labore maxime nobis nulla officia porro ratione sit soluta tempora, totam veritatis voluptatum?
+							cite Автор цитаты
 
 						figure(class="article_video mb_70")
 							div(class="article_video_container mb_70")
@@ -255,43 +244,8 @@ html(lang="ru")
 
 
 
-
-				section(class="readmore")
-					h2(class="title_center fs_36") Читайте также
-					div(class="row")
-						article(class="readmore_card")
-							div(class="readmore_card_image")
-								img(src="./images/readmore/01.webp"  loading="lazy" alt="" width="250" height="200")
-							h3(class="readmore_card_title fs_14")
-								a(href="#0") Одежда Dior от Трэвиса Скотта, баскетбольные мячи от Tiffany & Co: дайджест fashion-новостей недели
-
-						article(class="readmore_card")
-							div(class="readmore_card_image")
-								img(src="./images/readmore/02.webp"  loading="lazy" alt="" width="250" height="283")
-							h3(class="readmore_card_title fs_14")
-								a(href="#0") Блейк Лайвли испекла торт в виде арбуза в кольце за 2,5 миллиона долларов
-
-						article(class="readmore_card")
-							a(class="banner_link" href="#0" target="_blank")
-								img(class="banner_readmore" loading="lazy" src="./images/banners/banner_read_more.webp" alt="" width="250" height="200")
-							h3(class="readmore_card_title fs_14") Возможное место для рекламы
-
-						article(class="readmore_card")
-							div(class="readmore_card_image")
-								img(src="./images/readmore/03.webp"  loading="lazy" alt="" width="250" height="113")
-							h3(class="readmore_card_title fs_14")
-								a(href="#0") Павел Воля поздравил Ляйсан Утяшеву с днем рождения: "Ты – лучшее, что случилось со мной"
-
-						article(class="readmore_card")
-							div(class="readmore_card_image")
-								img(src="./images/readmore/04.webp"  loading="lazy" alt="" width="250" height="283")
-							h3(class="readmore_card_title fs_14")
-								a(href="#0") "Ангел" Victoria's Secret Тейлор Хилл выходит замуж
-
-						article(class="readmore_card")
-							a(class="banner_link" href="#0" target="_blank")
-								img(class="banner_readmore" src="./images/banners/banner_read_more.webp" loading="lazy" alt="" width="250" height="200")
-							h3(class="readmore_card_title fs_14") Возможное место для рекламы
+				// READ MORE
+				include components/readmore
 
 
 
@@ -301,4 +255,3 @@ html(lang="ru")
 
 
 		include components/footer.pug
-		include components/scrolltop

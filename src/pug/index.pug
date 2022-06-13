@@ -31,58 +31,156 @@ html(lang="ru")
 
 
 			// Banner
-			section(class="banner mb_40")
-				h2(class="sr-only") Заголовок рекламного банера
+			div(class="banner mb_40")
 				div(class="banner_horizontal")
-					img(loading="lazy" src="./images/banners/banner_horizontal.webp" alt="" width="1450" height="250")
+					img(loading="lazy" src="./images/banners/main-desktop-top-1000-250.webp" alt="" width="1000" height="250")
+				div(class="banner_tablet")
+					img(loading="lazy" src="./images/banners/main-mobile-top-300-250.webp" alt="" width="300" height="250")
 
 
 
 			// Card Custom
 			div(class="cardcustom_container mb_40")
-				article(class="cardcustom")
-					a(class="cardcustom_picture" href="#0")
-						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom1.webp" alt="" width="" height="")
-					h2(class="cardcustom_title")
-						a(href="#0") Александра Ревенко: "С самого детства чувствую себя не как все"
+				div(class="cardcustom_left")
+				ul(class="cardcustom_list")
+					li(class="cardcustom_item")
+						article(class="cardcustom")
+							a(class="cardcustom_picture" href="#0")
+								img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom1.webp" alt="" width="" height="")
+							h2(class="cardcustom_title")
+								a(href="#0") Александра Ревенко: "С самого детства чувствую себя не как все"
 
-				article(class="cardcustom")
-					a(class="cardcustom_picture" href="#0")
-						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom2.webp" alt="" width="" height="")
-					h2(class="cardcustom_title")
-						a(href="#0") Пэрис Хилтон о женихе Картере Реуме, беременности и имени для дочери
+					li(class="cardcustom_item")
+						article(class="cardcustom")
+							a(class="cardcustom_picture" href="#0")
+								img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom2.webp" alt="" width="" height="")
+							h2(class="cardcustom_title")
+								a(href="#0") Пэрис Хилтон о женихе Картере Реуме, беременности и имени для дочери
 
-				article(class="cardcustom")
-					a(class="cardcustom_picture" href="#0")
-						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom3.webp" alt="" width="" height="")
-					h2(class="cardcustom_title")
-						a(href="#0") Настасья Самбурская, Элджей, Варвара Шмыкова и другие на премьере "Отряда самоубийц"
+					li(class="cardcustom_item")
+						article(class="cardcustom")
+							a(class="cardcustom_picture" href="#0")
+								img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom3.webp" alt="" width="" height="")
+							h2(class="cardcustom_title")
+								a(href="#0") Настасья Самбурская, Элджей, Варвара Шмыкова и другие на премьере "Отряда самоубийц"
 
-				article(class="cardcustom")
-					a(class="cardcustom_picture" href="#0")
-						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom4.webp" alt="" width="" height="")
-					h2(class="cardcustom_title")
-						a(href="#0") Лена Катина: о сыне, дружбе и конкуренции в шоу-бизнесе
+					li(class="cardcustom_item")
+						article(class="cardcustom")
+							a(class="cardcustom_picture" href="#0")
+								img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom4.webp" alt="" width="" height="")
+							h2(class="cardcustom_title")
+								a(href="#0") Лена Катина: о сыне, дружбе и конкуренции в шоу-бизнесе
 
-				article(class="cardcustom")
-					a(class="cardcustom_picture" href="#0")
-						img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom5.webp" alt="" width="" height="")
-					h2(class="cardcustom_title")
-						a(href="#0") Вновь холостой Билл Гейтс о дружбе с Джеффри Эпштейном и разводе: "Я должен идти дальше"
+					li(class="cardcustom_item")
+						article(class="cardcustom")
+							a(class="cardcustom_picture" href="#0")
+								img(class="cardcustom_image" loading="lazy" src="./images/main/cardcustom5.webp" alt="" width="" height="")
+							h2(class="cardcustom_title")
+								a(href="#0") Вновь холостой Билл Гейтс о дружбе с Джеффри Эпштейном и разводе: "Я должен идти дальше"
 
 
 
 
+				div(class="cardcustom_right")
 			//news
 			div(class="row mb_70")
 				div(class="home_content row")
 					include components/cards.pug
 
 
-				include components/sidebarBanner
+				// SidebarBanner
+				aside(class="sidebar")
+					div(class="sidebar_container")
+						div(class="banner")
+							div(class="banner_vertical_sidebar")
+								img(class="" src="./images/banners/main-desktop-odd1-300-600.webp" alt="" width="300" height="600")
+
+							div(class="banner_horizontal_small")
+								img(class="banner_small" src="./images/banners/main-desktop-odd1-300-90.webp" alt="" width="300" height="90")
 
 
 			//CARD SPECIAL
+			include components/card_special
+
+
+			//news
+			div(class="row mb_70")
+				div(class="home_content")
+					div(class="row mb_70")
+						include components/cards.pug
+
+					// Fashion
+					section(class="fashion_container mb_70")
+						h2(class="fashion_container_title")
+							span Fashion
+						div(class="row")
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news5.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Что носить в отпуске: тенденции курортного гардероба
+
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news6.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") 12 STOREEZ проведет Sample Sale в Outlet Village Белая Дача
+
+							article(class="fashion")
+								a(class="fashion_link" href="#0")
+									img(class="fashion_image" loading="lazy" src="./images/main/news4.webp" alt="" width="300" height="300")
+								h3(class="fashion_title fs_18")
+									a(href="#0") Смелые вырезы – главный тренд красных дорожек
+
+							a(class="fashion_category" href="#0")
+
+
+					div(class="row mb_70")
+						include components/cards.pug
+
+
+					// Beauty
+					section(class="beauty_container")
+						h2(class="beauty_container_title")
+							span Beauty
+							span Beauty
+						div(class="row")
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty1.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Дорого и сексуально: Кайли Дженнер представила особенную коллекцию косметики
+
+							article(class="beauty")
+								a(class="beauty_link" href="#0")
+									img(class="beauty_image" loading="lazy" src="./images/main/beauty2.webp" alt="" width="" height="")
+								h3(class="beauty_title fs_18")
+									a(href="#0") Lucky Leopard: что нужно знать о новой уходовой линии MONE Professional
+
+							a(class="beauty_category" href="#0")
+
+
+
+
+
+				// SidebarBanner
+				aside(class="sidebar")
+					div(class="sidebar_container")
+						div(class="banner")
+							div(class="banner_vertical_sidebar")
+								img(class="" src="./images/banners/main-desktop-even2-300-600.webp" alt="" width="300" height="600")
+
+							div(class="banner_horizontal_small")
+								img(class="banner_small" src="./images/banners/main-desktop-even2-300-90.webp" alt="" width="300" height="90")
+
+			// Banner
+			div(class="banner mb_40")
+				div(class="banner_horizontal")
+					img(loading="lazy" src="./images/banners/main-desktop-mid-1000-250.webp" alt="" width="1000" height="250")
+				div(class="banner_tablet")
+					img(loading="lazy" src="./images/banners/main-mobile-mid-300-250.webp" alt="" width="300" height="250")
+
+			//-CARD SPECIAL
 			include components/card_special
 
 			//news
@@ -145,108 +243,18 @@ html(lang="ru")
 
 
 
-				include components/sidebarBanner.pug
+				// SidebarBanner
+				aside(class="sidebar")
+					div(class="sidebar_container")
+						div(class="banner")
+							div(class="banner_vertical_sidebar")
+								img(class="" src="./images/banners/main-desktop-odd3-300-600.webp" alt="" width="300" height="600")
 
-			//-CARD SPECIAL
-			section(class="mb_70")
-				h2(class="title_center fs_36") К лету готова
-				div(class="cardspecial_row row")
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer1.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") Как повторить прическу Манижи с "Евровидения": мастер-класс от стилиста
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer2.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От принцессы Дианы до Мелании Трамп: прически, которые не выходят из моды
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer3.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") 5 лучших бьюти-процедур в преддверии лета: мнение Яны Лапутиной
-
-					article(class="cardspecial")
-						a(class="cardspecial_link" href="#0")
-							div(class="cardspecial_picture")
-								img(class="cardspecial_image" loading="lazy" src="./images/main/summer4.webp" alt="" width="300" height="300")
-							footer(class="cardspecial_footer")
-								h3(class="cardspecial_title") Уход за кожей и волосами
-								p(class="cardspecial_description") От лаванды до зелени: весенне-летние тренды маникюра
-
-			//news
-			div(class="row mb_70")
-				div(class="home_content")
-					div(class="row mb_70")
-						include components/cards.pug
-
-					// Fashion
-					section(class="fashion_container mb_70")
-						h2(class="fashion_container_title")
-							span Fashion
-						div(class="row")
-							article(class="fashion")
-								a(class="fashion_link" href="#0")
-									img(class="fashion_image" loading="lazy" src="./images/main/news5.webp" alt="" width="300" height="300")
-								h3(class="fashion_title fs_18")
-									a(href="#0") Что носить в отпуске: тенденции курортного гардероба
-
-							article(class="fashion")
-								a(class="fashion_link" href="#0")
-									img(class="fashion_image" loading="lazy" src="./images/main/news6.webp" alt="" width="300" height="300")
-								h3(class="fashion_title fs_18")
-									a(href="#0") 12 STOREEZ проведет Sample Sale в Outlet Village Белая Дача
-
-							article(class="fashion")
-								a(class="fashion_link" href="#0")
-									img(class="fashion_image" loading="lazy" src="./images/main/news4.webp" alt="" width="300" height="300")
-								h3(class="fashion_title fs_18")
-									a(href="#0") Смелые вырезы – главный тренд красных дорожек
-
-							a(class="fashion_category" href="#0")
-
-
-					div(class="row mb_70")
-						include components/cards.pug
-
-
-					// Beauty
-					section(class="beauty_container")
-						h2(class="beauty_container_title")
-							span Beauty
-							span Beauty
-						div(class="row")
-							article(class="beauty")
-								a(class="beauty_link" href="#0")
-									img(class="beauty_image" loading="lazy" src="./images/main/beauty1.webp" alt="" width="" height="")
-								h3(class="beauty_title fs_18")
-									a(href="#0") Дорого и сексуально: Кайли Дженнер представила особенную коллекцию косметики
-
-							article(class="beauty")
-								a(class="beauty_link" href="#0")
-									img(class="beauty_image" loading="lazy" src="./images/main/beauty2.webp" alt="" width="" height="")
-								h3(class="beauty_title fs_18")
-									a(href="#0") Lucky Leopard: что нужно знать о новой уходовой линии MONE Professional
-
-							a(class="beauty_category" href="#0")
+							div(class="banner_horizontal_small")
+								img(class="banner_small" src="./images/banners/main-desktop-odd3-300-90.webp" alt="" width="300" height="90")
 
 
 
 
 
-				include components/sidebarBanner.pug
-
-
-
-
-		include components/footer.pug
-		include components/scrolltop
+		include components/footer

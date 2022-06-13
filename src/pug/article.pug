@@ -51,7 +51,7 @@ html(lang="ru")
 					div(class="article_body row")
 						p(class="article_paragraph fs_18 mb_70") "Жара" – все! Причем во всех смыслах: сегодня в Москву пришел долгожданный дождь, который "смыл" 30-градусную жару, а вчера вечером в столичном концертном зале Crocus City Hall прошел финальный гала-концерт одноименного музыкального фестиваля. Напомним, организаторам фестиваля в срочном порядке, практически на ходу пришлось менять формат мероприятия: первый день прошел при зрителях, а все остальные четыре дня зрителный зал, увы, был пуст за исключением самих звездных гостей, а выступления артистов транслировали онлайн на различных платформах.
 
-						figure(class="article_figure")
+						figure(class="image")
 							img(src="./images/article/1.webp" loading="lazy" alt="Maruv" width="960" height="500")
 							figcaption Maruv
 
@@ -67,7 +67,7 @@ html(lang="ru")
 						- let i
 							- for(i = 0; i < text.length; i++)
 								- let n = i + 2
-								figure(class="article_figure")
+								figure(class="image")
 									img(src="./images/article/" + n + ".webp"  loading="lazy" alt= text[i] width="" height="")
 									figcaption= text[i]
 
@@ -96,19 +96,17 @@ html(lang="ru")
 
 						p
 							span(class="slider_gallery_block")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_11.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_11.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="Lorem ipsum dolor sit amet." image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="Accusamus dolor doloribus error est ex illo in inventore molestias obcaecati perferendis quae, quas quasi sequi tempora voluptate!" image_label="" width="750" height="545")
 
 						p(class="article_paragraph fs_18 mb_70") Слайдер2:
 
 						p
 							span(class="slider_gallery_block")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_11.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_9.jpg" alt="" image_label="" width="750" height="545")
-								img(src="https://ru.hellomagazine.com//images/2021/june/anya/make2062021_10.jpg" alt="" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com/uploads/6141fc1660912.jpg" alt="Увлажняющая линия: очищающий мусс для умывания, смягчающий тоник для лица, крем-гель для век, крем-гель для лица, лосьон для лица с солнцезащитным фильтром SPF 30 UVA/UVB PA++++" data-href="https://www.amway.ru/our-brands/artistry/skin-nutrition/uvlazhnenie" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com/uploads/6141fc16a7480.jpg" alt="Обновляющая линия: укрепляющий крем Ультра Лифтинг, обновляющий восстанавливающий крем для кожи вокруг глаз, пенка для умывания, смягчающий тоник для лица, восстанавливающий крем для лица, восстанавливающий крем для лица с солнцезащитным фильтром SPF 30 UVA/UVB PA++++" data-href="https://www.amway.ru/our-brands/artistry/skin-nutrition/skin-restoration-and-lifting" image_label="" width="750" height="545")
+								img(src="https://ru.hellomagazine.com/uploads/6141fc16ab295.jpg" alt="Матирующая линия: очищающее желе для умывания, освежающий тоник для лица, лосьон для лица c солнце-защитным фильтром SPF 30 UVA/ UVB PA++++" data-href="https://www.amway.ru/our-brands/artistry/skin-nutrition/matirovanie-i-balans" image_label="" width="750" height="545")
 
 						p(class="article_paragraph fs_18 mb_70") Цитата:
 
@@ -120,8 +118,6 @@ html(lang="ru")
 								embiend(allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wPOb8sr3TKc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="auto" frameborder="0")
 
 
-
-
 					footer(class="article_footer")
 						ul(class="article_footer_tags")
 							- let tags = ["Ксения Собчак", "Леонид Агутин", "Ёлка", "Наталья Чистякова-Ионова", "Эмин Агаларов", "Дмитрий Маликов", "Полина Гагарина", "Григорий Лепс", "Рита Дакота", "Музыка"]
@@ -131,14 +127,24 @@ html(lang="ru")
 
 
 
-
-
-
+					// Banner
+					div(class="banner mb_40")
+						div(class="banner_horizontal")
+							img(loading="lazy" src="./images/banners/article/article-desktop-a1-1000-250.webp" alt="" width="1000" height="250")
+						div(class="banner_tablet")
+							img(loading="lazy" src="./images/banners/article/article-mobile-a1-300-250.webp" alt="" width="300" height="250")
 				// READ MORE
 				include components/readmore
 
 
 			include components/sidebarBanner.pug
+
+		// Banner
+		div(class="banner mb_40")
+			div(class="banner_horizontal")
+				img(loading="lazy" src="./images/banners/article/article-desktop-a2-1000-250.webp" alt="" width="1000" height="250")
+			div(class="banner_tablet")
+				img(loading="lazy" src="./images/banners/article/article-mobile-a2-300-250.webp" alt="" width="300" height="250")
 
 		div(class="container row page")
 			div(class="page_row")
@@ -180,7 +186,7 @@ html(lang="ru")
 					div(class="article_body row")
 						p(class="article_paragraph fs_18 mb_70") "Жара" – все! Причем во всех смыслах: сегодня в Москву пришел долгожданный дождь, который "смыл" 30-градусную жару, а вчера вечером в столичном концертном зале Crocus City Hall прошел финальный гала-концерт одноименного музыкального фестиваля. Напомним, организаторам фестиваля в срочном порядке, практически на ходу пришлось менять формат мероприятия: первый день прошел при зрителях, а все остальные четыре дня зрителный зал, увы, был пуст за исключением самих звездных гостей, а выступления артистов транслировали онлайн на различных платформах.
 
-						figure(class="article_figure")
+						figure(class="image")
 							img(src="./images/article/1.webp" loading="lazy" alt="Maruv" width="960" height="500")
 							figcaption Maruv
 
@@ -193,7 +199,7 @@ html(lang="ru")
 						- let j
 							- for(j = 0; j < text.length; j++)
 								- let n = j + 2
-								figure(class="article_figure")
+								figure(class="image")
 									img(src="./images/article/" + n + ".webp"  loading="lazy" alt= text[j] width="" height="")
 									figcaption= text[j]
 
@@ -244,14 +250,25 @@ html(lang="ru")
 
 
 
+					// Banner
+					div(class="banner mb_40")
+						div(class="banner_horizontal")
+							img(loading="lazy" src="./images/banners/article/article-desktop-b1-1000-250.webp" alt="" width="1000" height="250")
+						div(class="banner_tablet")
+							img(loading="lazy" src="./images/banners/article/article-mobile-b1-300-250.webp" alt="" width="300" height="250")
 				// READ MORE
 				include components/readmore
-
-
 
 			include components/sidebarBanner.pug
 
 
 
 
+
+		// Banner
+		div(class="banner mb_40")
+			div(class="banner_horizontal")
+				img(loading="lazy" src="./images/banners/article/article-desktop-b2-1000-250.webp" alt="" width="1000" height="250")
+			div(class="banner_tablet")
+				img(loading="lazy" src="./images/banners/article/article-mobile-b2-300-250.webp" alt="" width="300" height="250")
 		include components/footer.pug

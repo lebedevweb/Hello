@@ -53,7 +53,7 @@ gulp.task('html', () => {
 //Таск для обработки стилей
 gulp.task('styles', () => {
   return gulp.src(styleFiles)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on("error", notify.onError()))
     .pipe(autoprefixer({ cascade: true, grid:true }))
     .pipe(cleancss({
@@ -65,7 +65,7 @@ gulp.task('styles', () => {
         }
       }
     })) // Opt., comment out when debugging
-  .pipe(sourcemaps.write())
+  // .pipe(sourcemaps.write())
   // .pipe(rename({suffix: '.min'}))
   //Выходная папка для стилей
   .pipe(gulp.dest('../build/css'))
@@ -75,14 +75,14 @@ gulp.task('styles', () => {
 //Таск для обработки скриптов
 gulp.task('scripts', () => {
   return gulp.src(scriptFiles)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/preset-env'],
 
     }))
     .pipe(concat('scripts.min.js'))
-    // .pipe(uglify()) // Mifify js (opt.)
-    .pipe(sourcemaps.write())
+    .pipe(uglify()) // Mifify js (opt.)
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('../build/js'))
     .pipe(browserSync.stream());
 });

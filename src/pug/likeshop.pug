@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+	include components/header.pug
+	body
+		include components/navbar.pug
+		include components/sidenav.pug
+		include components/search.pug
+
+
+		main(class="likeshop_container likeshop")
+			h1(class="likeshop_title") Нажмите на фото, чтобы узнать больше
+			ul(class="likeshop_list")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/01.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/02.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/03.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/04.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/05.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/06.webp" alt="" loading="lazy" width="" height="")
+				li(class="likeshop_item")
+					a(class="likeshop_link" href="#0")
+						img(class="likeshop_image" src="./images/likeshop/07.webp" alt="" loading="lazy" width="" height="")
+				//li(class="likeshop_item")
+				//	a(class="likeshop_link" href="#0")
+				//		img(class="likeshop_image" src="./images/likeshop/08.webp" alt="" loading="lazy" width="" height="")
+
+
+
+include components/footer
